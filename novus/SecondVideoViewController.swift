@@ -15,14 +15,25 @@ class SecondVideoViewController: UIViewController {
     @IBOutlet weak var boton1: UIButton!
     @IBOutlet weak var boton2: UIButton!
     @IBOutlet weak var boton3: UIButton!
-    @IBOutlet weak var atpSecondVideo: UILabel!
     
     @IBAction func goFinal(_ sender: Any) {
         performSegue(withIdentifier: "FinApp", sender: self)
     }
     
-    @IBAction func playVideo(_ sender: Any) {
-        guard let url = URL(string: "https://www.youtube.com/watch?v=9VBQB12Higk") else { return }
+    @IBAction func playVideoAnemia(_ sender: Any) {
+        guard let url = URL(string: "https://www.youtube.com/watch?v=hs7KdV_BLss") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func playVideoSindrome(_ sender: Any) {
+        guard let url = URL(string: "https://www.youtube.com/watch?v=pyFlCVoV79Y") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func playVideoHerpes(_ sender: Any) {
+        guard let url = URL(string: "https://www.youtube.com/watch?v=GCEKJrJ78T4") else { return }
         let safariViewController = SFSafariViewController(url: url)
         self.present(safariViewController, animated: true, completion: nil)
     }

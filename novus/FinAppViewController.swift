@@ -14,10 +14,12 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
 
     @IBOutlet weak var avatar: UILabel!
     @IBOutlet weak var celulas: UILabel!
-    @IBOutlet weak var juego: UILabel!
+    @IBOutlet weak var dogma: UILabel!
+    @IBOutlet weak var rompecabezas: UILabel!
     @IBOutlet weak var storytelling: UILabel!
-    @IBOutlet weak var total: UILabel!
-  
+    @IBOutlet weak var casoClinico: UILabel!
+    @IBOutlet weak var nombreAlumno: UITextField!
+    
     
     @IBAction func startAgain(_ sender: Any) {
         performSegue(withIdentifier: "startAgain", sender: self)
@@ -34,11 +36,14 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
     
     //Mandar correo
     @IBAction func sendEmailButtonTapped(_ sender: Any) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            showErrorMessage()
+        if nombreAlumno.text != ""{
+            
+            let mailComposeViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                showErrorMessage()
+            }
         }
     }
     
@@ -48,7 +53,7 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         mailComposerVC.setToRecipients(["novusbio3d@gmail.com"])
         mailComposerVC.setSubject("Resumen App")
-        mailComposerVC.setMessageBody("Tiempo Avatar: \(avatar) seg \n Tiempo Celulas: \(celulas) seg \n Tiempo Juego: \(juego) seg \n Tiempo Storytelling: \(storytelling) seg \n", isHTML: true)
+        mailComposerVC.setMessageBody("Nombre del alumno: \(nombreAlumno) \n Tiempo Avatar: \(avatar) seg \n Tiempo Celulas: \(celulas) seg \n Tiempo Juego: \(dogma) seg \n Tiempo Storytelling: \(rompecabezas) seg \n Tiempo Storytelling: \(storytelling) seg \n Tiempo Storytelling: \(casoClinico) seg \n", isHTML: true)
         
         return mailComposerVC
     }

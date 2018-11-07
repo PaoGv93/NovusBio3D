@@ -14,7 +14,6 @@ class FirstVideoViewController: UIViewController {
     @IBOutlet weak var botonReplicacion: UIButton!
     @IBOutlet weak var botonTranscripcion: UIButton!
     @IBOutlet weak var botonTraduccion: UIButton!
-    @IBOutlet weak var atpVIDEO: UILabel!
     
     @IBAction func goReplicacion(_ sender: Any) {
         performSegue(withIdentifier: "Replicacion", sender: self)

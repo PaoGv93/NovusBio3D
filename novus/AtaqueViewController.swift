@@ -11,8 +11,6 @@ import AVFoundation
 import AVKit
 
 class AtaqueViewController: UIViewController {
-
-    @IBOutlet weak var atpAtaque: UILabel!
     
     @IBOutlet weak var videoPreviewLayer: UIView!
     var player: AVPlayer!

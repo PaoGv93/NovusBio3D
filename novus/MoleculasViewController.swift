@@ -13,7 +13,6 @@ class MoleculasViewController: UIViewController {
     @IBOutlet weak var botonAnimal: UIButton!
     @IBOutlet weak var botonVegetal: UIButton!
     @IBOutlet weak var botonBacteria: UIButton!
-    @IBOutlet weak var atpMolecula: UILabel!
     
     // Tiempos de las moleculas
     @IBOutlet weak var tiempoAnimal: UILabel!

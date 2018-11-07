@@ -10,9 +10,7 @@ import UIKit
 import AVFoundation
 
 class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    @IBOutlet weak var atpStorytelling: UILabel!
-    
+        
     @IBOutlet weak var quienPicker: UIPickerView!
     @IBOutlet weak var porquePicker: UIPickerView!
     @IBOutlet weak var conQuienPicker: UIPickerView!
@@ -56,6 +54,187 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+        if (pickerView == quienPicker) {
+            switch row {
+                
+                case 0:
+                    fraseQuien = "El corredor"
+                
+                case 1:
+                    fraseQuien = "La bailarina"
+                
+                case 2:
+                    fraseQuien = "La señora"
+                
+                case 3:
+                    fraseQuien = "Los niños"
+                
+                case 4:
+                    fraseQuien = "La joven"
+                
+                case 5:
+                    fraseQuien = "El niño"
+                
+                default:
+                    fraseQuien = "El corredor"
+            }
+        }
+        else if (pickerView == porquePicker) {
+            switch row {
+                
+                case 0:
+                    frasePorque = "ebola"
+                
+                case 1:
+                    frasePorque = "hepatitis"
+                
+                case 2:
+                    frasePorque = "acteria"
+                
+                case 3:
+                    frasePorque = "nfluenza"
+                
+                case 4:
+                    frasePorque = "virus"
+                
+                case 5:
+                    frasePorque = "HIV"
+                
+                case 6:
+                    frasePorque = "medicamentos"
+                
+                case 7:
+                    frasePorque = "radiacion"
+                
+                default:
+                    frasePorque = "ebola"
+            }
+        }
+        else if pickerView == conQuienPicker {
+            switch row {
+                
+                case 0:
+                    fraseConQuien = "la niña"
+                
+                case 1:
+                    fraseConQuien = "el chef"
+                
+                case 2:
+                    fraseConQuien = "el perro"
+                
+                case 3:
+                    fraseConQuien = "los excursionistas"
+                
+                case 4:
+                    fraseConQuien = "los vacacionistas"
+                
+                case 5:
+                    fraseConQuien = "la fabrica"
+                
+                default:
+                    fraseConQuien = "la niña"
+            }
+        }
+        else if pickerView == comoPicker {
+            switch row {
+                
+                case 0:
+                    fraseComo = "comiendo helado"
+                
+                case 1:
+                    fraseComo = "tomando la mano"
+                
+                case 2:
+                    fraseComo = "comiendo"
+                
+                case 3:
+                    fraseComo = "saludando"
+                
+                case 4:
+                    fraseComo = "inyectando"
+                
+                case 5:
+                    fraseComo = "tomando agua"
+                
+                default:
+                    fraseComo = "comiendo helado"
+            }
+        }
+        else if pickerView == cuandoPicker {
+            switch row {
+                
+                case 0:
+                    fraseCuando = "en la tormenta"
+                
+                case 1:
+                    fraseCuando = "el 31"
+                
+                case 2:
+                    fraseCuando = "a las 17:00"
+                
+                case 3:
+                    fraseCuando = "cuando esperaba"
+                
+                case 4:
+                    fraseCuando = "ayer"
+                
+                default:
+                    fraseCuando = "en la tormenta"
+            }
+        }
+        else if pickerView == dondePicker {
+            switch row {
+                
+                case 0:
+                    fraseDonde = "en la granja"
+                
+                case 1:
+                    fraseDonde = "en la cafeteria"
+                
+                case 2:
+                    fraseDonde = "en el trabajo"
+                
+                case 3:
+                    fraseDonde = "en la playa"
+                
+                case 4:
+                    fraseDonde = "en el autobus"
+                
+                default:
+                    fraseDonde = "en la granja"
+            }
+        }
+        else if pickerView == propuestaPicker {
+            switch row {
+                
+                case 0:
+                    frasePropuesta = "las vitaminas"
+                
+                case 1:
+                    frasePropuesta = "la bruja"
+                
+                case 2:
+                    frasePropuesta = "la poción"
+                
+                case 3:
+                    frasePropuesta = "la formula"
+                
+                case 4:
+                    frasePropuesta = "el doctor"
+                
+                case 5:
+                    frasePropuesta = "la inyeccion"
+                
+                default:
+                    frasePropuesta = "las vitaminas"
+            }
+        }
+        
+        fraseFinal = fraseQuien + " " + frasePorque + " " + fraseConQuien + " " + fraseComo + " " + fraseCuando + " " + fraseDonde + " " + frasePropuesta
+        
+        frase.text = fraseFinal
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -101,13 +280,13 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
             let propuestaView = UIView(frame: CGRect(x: 0, y: 0, width:propuestaPicker.bounds.width, height: 70))
 
 
-            let quienImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let porqueImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let conQuienImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let comoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let cuandoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let dondeImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
-            let propuestaImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 60))
+            let quienImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let porqueImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let conQuienImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let comoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let cuandoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let dondeImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
+            let propuestaImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: quienView.bounds.width, height: 70))
 
             switch row {
                 case 0:
@@ -192,10 +371,6 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
         else if quienImageView.image == quien[5] {
             fraseQuien = "quien6" }
 
-        
-        fraseFinal = fraseQuien + " " + frasePorque + " " + fraseConQuien + " " + fraseComo + " " + fraseCuando + " " + fraseDonde + " " + frasePropuesta
-
-        frase.text = fraseFinal
  
         
         if pickerView == quienPicker {
@@ -222,5 +397,4 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     }
 
-    
 }

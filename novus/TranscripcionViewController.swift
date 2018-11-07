@@ -8,21 +8,17 @@
 
 import UIKit
 import AVKit
+import SafariServices
 
 class TranscripcionViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
     @IBAction func playVideo(_ sender: Any) {
-        if let path = Bundle.main.path(forResource: "video", ofType: "mp4") {
-            let videoURL = URL(fileURLWithPath: path)
-            let player = AVPlayer(url: videoURL)
-            let playerController = AVPlayerViewController()
-            playerController.player = player
-            present(playerController, animated: true, completion: {
-                player.play()
-            })
-        }
+        
+        guard let url = URL(string: "https://www.youtube.com/watch?v=q4_STYCxKHk") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
