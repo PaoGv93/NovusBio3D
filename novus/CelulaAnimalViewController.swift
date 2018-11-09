@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct ViewStateCelulaAnimal {
+    static var state = false
+}
+
 class CelulaAnimalViewController: UIViewController {
 
     @IBOutlet weak var citoesqueleto: UITextField!
@@ -66,6 +70,7 @@ class CelulaAnimalViewController: UIViewController {
         if citoesqueleto.text == "4" && citoplasma.text == "2" && nucleo.text == "1" && centriolos.text == "7" && cromatina.text == "3" && mitocondria.text == "8" && ribosoma.text == "13" && libosoma.text == "12" && reticuloRugoso.text == "6" && reticuloLiso.text == "9" && golgi.text == "11" && vesicula.text == "10" && pared.text == "5"  && informacionCodificada.text == "1" && espacioOrganelos.text == "2" && iniciaCitoesqueleto.text == "7" && fabricaEnergia.text == "8" && macromolecula.text == "3" && estructuraCelula.text == "4" && sintesisLipidos.text == "9" && transportaSustancias.text == "10" && BicapaLipidica.text == "5" && sintesisProteinas.text == "6" && empaquetar.text == "11" && eliminarProteinas.text == "12" && produccionProteinas.text == "13" {
             
             tiempo.text = tiempoCelulaAnimal.text
+            ViewStateCelulaAnimal.state = true
             performSegue(withIdentifier: "goBack", sender: self)
         }
         if citoesqueleto.text == "4" {

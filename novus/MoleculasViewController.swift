@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct ViewStateGeneralCelulas {
+    static var state = false
+}
+
 class MoleculasViewController: UIViewController {
 
     @IBOutlet weak var botonAnimal: UIButton!
@@ -24,8 +28,24 @@ class MoleculasViewController: UIViewController {
     @IBOutlet weak var tiempoBacteria: UILabel!
     var tiempoB = String()
     
+    //ir a puntos finales
+    @IBAction func irPuntos(_ sender: Any) {
+        performSegue(withIdentifier: "irPuntos", sender: self)
+    }
+    
     @IBAction func goFirstVideo(_ sender: Any) {
+        if(ViewStateCelulaVegetal.state == true && ViewStateCelulaAnimal.state == true && ViewStateCelulaBacteriana.state == true){
         performSegue(withIdentifier: "FirstVideo", sender: self)
+        } else{
+            // create the alert
+            let alert = UIAlertController(title: "Error", message: "No has completado todo.", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func goCelulaAnimal(_ sender: Any) {

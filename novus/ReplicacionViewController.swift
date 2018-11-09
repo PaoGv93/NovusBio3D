@@ -10,12 +10,17 @@ import UIKit
 import AVKit
 import SafariServices
 
+struct ViewStateVideoReplicacion {
+    static var state = false
+}
+
 class ReplicacionViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
     @IBAction func playVideo(_ sender: Any) {
         
+        ViewStateVideoReplicacion.state = true
         guard let url = URL(string: "https://youtu.be/r671Cr0vT-g") else { return }
         let safariViewController = SFSafariViewController(url: url)
         self.present(safariViewController, animated: true, completion: nil)

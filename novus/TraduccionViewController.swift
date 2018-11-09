@@ -9,12 +9,19 @@
 import UIKit
 import AVKit
 
+struct ViewStateVideoTraduccion {
+    static var state = false
+}
+
 class TraduccionViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
     
     @IBAction func playVideo(_ sender: Any) {
+        
+        ViewStateVideoTraduccion.state = true
+        
         if let path = Bundle.main.path(forResource: "video", ofType: "mp4") {
             let videoURL = URL(fileURLWithPath: path)
             let player = AVPlayer(url: videoURL)

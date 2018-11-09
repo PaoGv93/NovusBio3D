@@ -8,9 +8,19 @@
 
 import UIKit
 
+struct ViewStateRompecabezas {
+    static var state = false
+}
+
 class SopaLetrasViewController: UIViewController {
     
+    //ir a puntos finales
+    @IBAction func irPuntos(_ sender: Any) {
+        performSegue(withIdentifier: "irPuntos", sender: self)
+    }
+    
     @IBAction func goAtaque(_ sender: Any) {
+        ViewStateRompecabezas.state = true
         performSegue(withIdentifier: "goAtaque", sender: self)
     }
     

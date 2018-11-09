@@ -10,11 +10,17 @@ import UIKit
 import AVKit
 import SafariServices
 
+struct ViewStateVideoTranscripcion {
+    static var state = false
+}
+
 class TranscripcionViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
     @IBAction func playVideo(_ sender: Any) {
+        
+        ViewStateVideoTranscripcion.state = true
         
         guard let url = URL(string: "https://www.youtube.com/watch?v=q4_STYCxKHk") else { return }
         let safariViewController = SFSafariViewController(url: url)

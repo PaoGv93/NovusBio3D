@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+struct ViewStateStorytelling {
+    static var state = false
+}
+
 class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
     @IBOutlet weak var quienPicker: UIPickerView!
@@ -39,13 +43,24 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
     let propuesta: [UIImage] = [UIImage(named: "SOLUCION1")!, UIImage(named: "SOLUCION2")!, UIImage(named: "SOLUCION3")!, UIImage(named: "SOLUCION4")!, UIImage(named: "SOLUCION5")!, UIImage(named: "SOLUCION6")!]
     
     
-    @IBAction func goStorytelling(_ sender: Any) {
-
+    //ir a los puntos finales
+    @IBAction func irPuntos(_ sender: Any) {
+        performSegue(withIdentifier: "irPuntos", sender: self)
+    }
+    
+    
+    @IBAction func goCasosClinicos(_ sender: Any) {
+        
+            ViewStateStorytelling.state = true
             performSegue(withIdentifier: "SecondVideo", sender: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fraseFinal = "Francisco" + "fue atacado por el virus del ebola, " + "cuando convivia con la familia " + "ya que tomo un helado contaminado"  + "en un día muy lluvioso " + "en una casa de campo que teniamos " + "se tomará vitaminas."
+        
+        frase.text = fraseFinal
         
     }
 
@@ -60,175 +75,175 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
             switch row {
                 
                 case 0:
-                    fraseQuien = "El corredor"
+                    fraseQuien = "Francisco "
                 
                 case 1:
-                    fraseQuien = "La bailarina"
+                    fraseQuien = "Alenjandra "
                 
                 case 2:
-                    fraseQuien = "La señora"
+                    fraseQuien = "Ernestina "
                 
                 case 3:
-                    fraseQuien = "Los niños"
+                    fraseQuien = "Los gemelos loranca "
                 
                 case 4:
-                    fraseQuien = "La joven"
+                    fraseQuien = "Juanita "
                 
                 case 5:
-                    fraseQuien = "El niño"
+                    fraseQuien = "Jesús "
                 
                 default:
-                    fraseQuien = "El corredor"
+                    fraseQuien = "Francisco "
             }
         }
         else if (pickerView == porquePicker) {
             switch row {
                 
                 case 0:
-                    frasePorque = "ebola"
+                    frasePorque = "fue atacado por el virus del ebola, "
                 
                 case 1:
-                    frasePorque = "hepatitis"
+                    frasePorque = "se infectó de hepatitis B. "
                 
                 case 2:
-                    frasePorque = "acteria"
+                    frasePorque = "se infectó de un bacteriófago, "
                 
                 case 3:
-                    frasePorque = "nfluenza"
+                    frasePorque = "se contagió de influenza, "
                 
                 case 4:
-                    frasePorque = "virus"
+                    frasePorque = "se infectó con adenovirus, "
                 
                 case 5:
-                    frasePorque = "HIV"
+                    frasePorque = "se infecto de VIH, "
                 
                 case 6:
-                    frasePorque = "medicamentos"
+                    frasePorque = "fue alterado por una molécula, "
                 
                 case 7:
-                    frasePorque = "radiacion"
+                    frasePorque = "se expuso a una radiación, "
                 
                 default:
-                    frasePorque = "ebola"
+                    frasePorque = "fue atacado por el virus del ebola, "
             }
         }
         else if pickerView == conQuienPicker {
             switch row {
                 
                 case 0:
-                    fraseConQuien = "la niña"
+                    fraseConQuien = "cuando convivia con la familia "
                 
                 case 1:
-                    fraseConQuien = "el chef"
+                    fraseConQuien = "en un restaurante elegante "
                 
                 case 2:
-                    fraseConQuien = "el perro"
+                    fraseConQuien = "cuando era niña "
                 
                 case 3:
-                    fraseConQuien = "los excursionistas"
+                    fraseConQuien = "en un viaje a las montañas "
                 
                 case 4:
-                    fraseConQuien = "los vacacionistas"
+                    fraseConQuien = "en un viaje con la familia "
                 
                 case 5:
-                    fraseConQuien = "la fabrica"
+                    fraseConQuien = "en una mina de las montañas "
                 
                 default:
-                    fraseConQuien = "la niña"
+                    fraseConQuien = "cuando convivia con la familia "
             }
         }
         else if pickerView == comoPicker {
             switch row {
                 
                 case 0:
-                    fraseComo = "comiendo helado"
+                    fraseComo = "ya que tomo un helado contaminado "
                 
                 case 1:
-                    fraseComo = "tomando la mano"
+                    fraseComo = "ya que tomo la mano de un enfermo "
                 
                 case 2:
-                    fraseComo = "comiendo"
+                    fraseComo = "teniendo un helado contaminado "
                 
                 case 3:
-                    fraseComo = "saludando"
+                    fraseComo = "al tener contacto con las manos "
                 
                 case 4:
-                    fraseComo = "inyectando"
+                    fraseComo = "al inyectarse un isotopo radoactivo por error "
                 
                 case 5:
-                    fraseComo = "tomando agua"
+                    fraseComo = "al tomar agua contaminada "
                 
                 default:
-                    fraseComo = "comiendo helado"
+                    fraseComo = "ya que tomo un helado contaminado "
             }
         }
         else if pickerView == cuandoPicker {
             switch row {
                 
                 case 0:
-                    fraseCuando = "en la tormenta"
+                    fraseCuando = "en un día muy lluvioso "
                 
                 case 1:
-                    fraseCuando = "el 31"
+                    fraseCuando = "en fin de año "
                 
                 case 2:
-                    fraseCuando = "a las 17:00"
+                    fraseCuando = "estabamos en la parte mas alta del viaje a la media noche "
                 
                 case 3:
-                    fraseCuando = "cuando esperaba"
+                    fraseCuando = "en un tiempo en el que trabajaba "
                 
                 case 4:
-                    fraseCuando = "ayer"
+                    fraseCuando = "en un contacto de poco tiempo "
                 
                 default:
-                    fraseCuando = "en la tormenta"
+                    fraseCuando = "en un día muy lluvioso "
             }
         }
         else if pickerView == dondePicker {
             switch row {
                 
                 case 0:
-                    fraseDonde = "en la granja"
+                    fraseDonde = "en una casa de campo que teniamos "
                 
                 case 1:
-                    fraseDonde = "en la cafeteria"
+                    fraseDonde = "al estar en un cafe "
                 
                 case 2:
-                    fraseDonde = "en el trabajo"
+                    fraseDonde = "después de una presentación "
                 
                 case 3:
-                    fraseDonde = "en la playa"
+                    fraseDonde = "en la playa "
                 
                 case 4:
-                    fraseDonde = "en el autobus"
+                    fraseDonde = "en el transporte del viaje "
                 
                 default:
-                    fraseDonde = "en la granja"
+                    fraseDonde = "en una casa de campo que teniamos "
             }
         }
         else if pickerView == propuestaPicker {
             switch row {
                 
                 case 0:
-                    frasePropuesta = "las vitaminas"
+                    frasePropuesta = "se tomará vitaminas."
                 
                 case 1:
-                    frasePropuesta = "la bruja"
+                    frasePropuesta = "buscará a una bruja."
                 
                 case 2:
-                    frasePropuesta = "la poción"
+                    frasePropuesta = "buscar a una botica."
                 
                 case 3:
-                    frasePropuesta = "la formula"
+                    frasePropuesta = "buscar tratamiento médico."
                 
                 case 4:
-                    frasePropuesta = "el doctor"
+                    frasePropuesta = "busca a un médico."
                 
                 case 5:
-                    frasePropuesta = "la inyeccion"
+                    frasePropuesta = "se alteró por una molécula."
                 
                 default:
-                    frasePropuesta = "las vitaminas"
+                    frasePropuesta = "se tomará vitaminas."
             }
         }
         
@@ -356,22 +371,7 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
                     dondeImageView.image = donde[0]
                     propuestaImageView.image = propuesta[0]
 
-            }
-        
-        if quienImageView.image == quien[0] {
-            fraseQuien = "quien1" }
-        else if quienImageView.image == quien[1] {
-            fraseQuien = "quien2" }
-        else if quienImageView.image == quien[2] {
-            fraseQuien = "quien3" }
-        else if quienImageView.image == quien[3] {
-            fraseQuien = "quien4" }
-        else if quienImageView.image == quien[4] {
-            fraseQuien = "quien5" }
-        else if quienImageView.image == quien[5] {
-            fraseQuien = "quien6" }
-
- 
+            } 
         
         if pickerView == quienPicker {
             quienView.addSubview(quienImageView)

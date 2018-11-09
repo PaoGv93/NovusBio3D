@@ -313,6 +313,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFv-Am-DMe">
+                                <rect key="frame" x="701" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                                <connections>
+                                    <action selector="irPuntos:" destination="ncN-YB-ncv" eventType="touchUpInside" id="cEs-QR-cYA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -338,6 +346,7 @@
                             <constraint firstItem="tfU-8L-55M" firstAttribute="top" secondItem="gmN-X3-27Z" secondAttribute="bottom" constant="18" id="PU2-bl-KTi"/>
                             <constraint firstItem="XRq-16-rhs" firstAttribute="top" secondItem="qF2-o0-YsN" secondAttribute="bottom" constant="35.5" id="QNM-ep-HDC"/>
                             <constraint firstItem="BEF-ko-D6k" firstAttribute="leading" secondItem="Gc0-fy-sd5" secondAttribute="leading" constant="144" id="RKr-Vq-jvm"/>
+                            <constraint firstItem="Gc0-fy-sd5" firstAttribute="trailing" secondItem="NFv-Am-DMe" secondAttribute="trailing" constant="20" id="TeX-wf-wGI"/>
                             <constraint firstItem="cSt-31-yRi" firstAttribute="leading" secondItem="Gc0-fy-sd5" secondAttribute="leading" constant="125" id="TqC-kL-R0l"/>
                             <constraint firstItem="3fa-GK-RJr" firstAttribute="leading" secondItem="cSt-31-yRi" secondAttribute="trailing" constant="12.5" id="W6i-tf-fwt"/>
                             <constraint firstItem="YlP-JM-0fD" firstAttribute="top" secondItem="dDP-Iv-vge" secondAttribute="bottom" constant="8" id="W7p-xD-4tX"/>
@@ -345,6 +354,7 @@
                             <constraint firstItem="cSt-31-yRi" firstAttribute="top" secondItem="dDP-Iv-vge" secondAttribute="bottom" constant="66" id="Z9x-Dn-5VT"/>
                             <constraint firstItem="CQJ-dI-Tj3" firstAttribute="top" secondItem="cSt-31-yRi" secondAttribute="bottom" constant="36.5" id="a3R-hq-13G"/>
                             <constraint firstItem="FW7-jj-e28" firstAttribute="top" secondItem="BEF-ko-D6k" secondAttribute="bottom" constant="35.5" id="aN9-GK-dzC"/>
+                            <constraint firstItem="NFv-Am-DMe" firstAttribute="top" secondItem="Gc0-fy-sd5" secondAttribute="top" id="amM-IT-qCy"/>
                             <constraint firstItem="FW7-jj-e28" firstAttribute="leading" secondItem="Gc0-fy-sd5" secondAttribute="leading" constant="125" id="bab-VY-vTY"/>
                             <constraint firstItem="qF2-o0-YsN" firstAttribute="leading" secondItem="Gc0-fy-sd5" secondAttribute="leading" constant="125" id="cbL-xw-lx6"/>
                             <constraint firstItem="A4O-Sd-oeI" firstAttribute="leading" secondItem="qF2-o0-YsN" secondAttribute="trailing" constant="8.5" id="dCK-80-qzX"/>
@@ -372,6 +382,7 @@
                         <outlet property="pesoPickerTextField" destination="8r2-G4-7Dp" id="vTw-Zs-JUn"/>
                         <outlet property="textLabel" destination="ghz-qR-qbh" id="P5o-aR-wj8"/>
                         <segue destination="0kr-bB-laT" kind="show" identifier="molecule" id="ANZ-hG-WF8"/>
+                        <segue destination="NQ9-yz-sQG" kind="show" identifier="irPuntos" id="M8V-Eu-lcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNg-Rc-SX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1017,18 +1028,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW5-XR-ibX">
+                                <rect key="frame" x="701" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                                <connections>
+                                    <action selector="irPuntos:" destination="Tmb-s5-knJ" eventType="touchUpInside" id="5mv-Vl-ag2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2gc-jq-j2W" firstAttribute="trailing" secondItem="2qq-a6-bl8" secondAttribute="trailing" constant="20" id="8Ro-XC-ewh"/>
+                            <constraint firstItem="BW5-XR-ibX" firstAttribute="top" secondItem="2gc-jq-j2W" secondAttribute="top" id="8mD-G5-f0W"/>
                             <constraint firstItem="2gc-jq-j2W" firstAttribute="bottom" secondItem="2qq-a6-bl8" secondAttribute="bottom" constant="20" id="G3H-jI-U7z"/>
                             <constraint firstItem="aD9-Px-zeg" firstAttribute="centerY" secondItem="6cm-jq-fGS" secondAttribute="centerY" multiplier="0.3" id="ko7-jO-J8D"/>
                             <constraint firstItem="aD9-Px-zeg" firstAttribute="centerX" secondItem="6cm-jq-fGS" secondAttribute="centerX" id="onw-dE-rsn"/>
+                            <constraint firstItem="2gc-jq-j2W" firstAttribute="trailing" secondItem="BW5-XR-ibX" secondAttribute="trailing" constant="20" id="wen-PJ-cnR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2gc-jq-j2W"/>
                     </view>
                     <connections>
                         <segue destination="8RM-Gp-Q02" kind="show" identifier="goAtaque" id="eJC-aI-3YN"/>
+                        <segue destination="NQ9-yz-sQG" kind="show" identifier="irPuntos" id="dR9-Ab-DyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIo-Ch-9HZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1578,6 +1600,14 @@
                                     <action selector="goSopaLetras:" destination="QOe-qd-h4k" eventType="touchUpInside" id="L60-yB-3Di"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-6l-cDA">
+                                <rect key="frame" x="705" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                                <connections>
+                                    <action selector="irPuntos:" destination="QOe-qd-h4k" eventType="touchUpInside" id="fu6-pA-F9e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1587,6 +1617,8 @@
                             <constraint firstItem="Vcu-6N-fIH" firstAttribute="centerX" secondItem="PFj-Zj-8vU" secondAttribute="centerX" multiplier="0.35" id="GnI-sm-FFf"/>
                             <constraint firstItem="EvC-fI-9lJ" firstAttribute="width" secondItem="Vcu-6N-fIH" secondAttribute="width" id="OYz-27-wXf"/>
                             <constraint firstItem="Vcu-6N-fIH" firstAttribute="height" secondItem="PFj-Zj-8vU" secondAttribute="height" multiplier="0.2" id="Rxi-gb-rkV"/>
+                            <constraint firstItem="xoW-6l-cDA" firstAttribute="top" secondItem="m2B-Hf-Doz" secondAttribute="top" id="Xt2-Ud-j5Y"/>
+                            <constraint firstItem="m2B-Hf-Doz" firstAttribute="trailing" secondItem="xoW-6l-cDA" secondAttribute="trailing" constant="16" id="Zar-DY-5od"/>
                             <constraint firstItem="2Ct-eV-10a" firstAttribute="width" secondItem="PFj-Zj-8vU" secondAttribute="width" multiplier="0.7" id="bQk-rP-nIW"/>
                             <constraint firstItem="EvC-fI-9lJ" firstAttribute="height" secondItem="Vcu-6N-fIH" secondAttribute="height" id="f0W-Lb-dBY"/>
                             <constraint firstItem="Vcu-6N-fIH" firstAttribute="centerY" secondItem="PFj-Zj-8vU" secondAttribute="centerY" id="kNY-xA-TIQ"/>
@@ -1609,6 +1641,7 @@
                         <segue destination="aIr-8j-ZaC" kind="show" identifier="Replicacion" id="X7E-SJ-GKB"/>
                         <segue destination="G4o-d9-49Z" kind="show" identifier="Traduccion" id="aVi-YA-9D9"/>
                         <segue destination="Tmb-s5-knJ" kind="show" identifier="goSopaLetras" id="uHO-nt-RHP"/>
+                        <segue destination="NQ9-yz-sQG" kind="show" identifier="irPuntos" id="5YU-xo-YvJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqC-q0-6il" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4500,7 +4533,7 @@ terminación</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Siguiente"/>
                                 <connections>
-                                    <action selector="goStorytelling:" destination="fQy-Gb-AtM" eventType="touchUpInside" id="X3V-LW-8Yd"/>
+                                    <action selector="goCasosClinicos:" destination="fQy-Gb-AtM" eventType="touchUpInside" id="6Ym-3i-lnJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea tu historia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z2-Hl-hHR">
@@ -4509,8 +4542,8 @@ terminación</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-zc-zVt">
-                                <rect key="frame" x="417" y="834" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-zc-zVt">
+                                <rect key="frame" x="41.5" y="834" width="751" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4521,6 +4554,14 @@ terminación</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f04-fP-OYm">
+                                <rect key="frame" x="701" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                                <connections>
+                                    <action selector="irPuntos:" destination="fQy-Gb-AtM" eventType="touchUpInside" id="UEh-ib-8ka"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -4538,6 +4579,7 @@ terminación</string>
                             <constraint firstItem="0mB-Ty-u66" firstAttribute="leading" secondItem="ghE-Ic-onB" secondAttribute="trailing" constant="39" id="GW8-Hq-MOU"/>
                             <constraint firstItem="3gU-tg-mhw" firstAttribute="width" secondItem="9QK-26-Yxt" secondAttribute="width" multiplier="0.15" id="IIr-LB-Wco"/>
                             <constraint firstItem="HWy-gS-zgw" firstAttribute="top" secondItem="7X7-EI-nYR" secondAttribute="bottom" constant="49" id="IK2-eN-eBw"/>
+                            <constraint firstItem="f04-fP-OYm" firstAttribute="top" secondItem="TdN-g1-fgP" secondAttribute="top" id="Ixq-1X-vgr"/>
                             <constraint firstItem="lei-J4-Cxa" firstAttribute="centerX" secondItem="9QK-26-Yxt" secondAttribute="centerX" multiplier="0.98" id="JMK-P3-eQj"/>
                             <constraint firstItem="TdN-g1-fgP" firstAttribute="bottom" secondItem="Syk-Dp-BdK" secondAttribute="bottom" constant="20" id="JnW-WF-62X"/>
                             <constraint firstItem="0mB-Ty-u66" firstAttribute="top" secondItem="QgM-ea-dRL" secondAttribute="bottom" constant="49" id="JuL-E7-LGE"/>
@@ -4551,6 +4593,7 @@ terminación</string>
                             <constraint firstItem="h7f-Ej-eb2" firstAttribute="centerX" secondItem="9QK-26-Yxt" secondAttribute="centerX" multiplier="1.76" id="RLw-xc-jRQ"/>
                             <constraint firstItem="N8f-Lg-z2m" firstAttribute="top" secondItem="TsO-Tm-oJW" secondAttribute="bottom" constant="49" id="UMn-tO-I7o"/>
                             <constraint firstItem="ghE-Ic-onB" firstAttribute="top" secondItem="lei-J4-Cxa" secondAttribute="bottom" constant="49" id="Xem-rM-SWl"/>
+                            <constraint firstItem="Caa-zc-zVt" firstAttribute="width" secondItem="9QK-26-Yxt" secondAttribute="width" multiplier="0.9" id="YRr-ZE-Akp"/>
                             <constraint firstItem="TsO-Tm-oJW" firstAttribute="centerY" secondItem="9QK-26-Yxt" secondAttribute="centerY" id="Yvr-8M-AWW"/>
                             <constraint firstItem="Caa-zc-zVt" firstAttribute="centerX" secondItem="9QK-26-Yxt" secondAttribute="centerX" id="b0h-KQ-PKO"/>
                             <constraint firstItem="7Z2-Hl-hHR" firstAttribute="centerY" secondItem="9QK-26-Yxt" secondAttribute="centerY" multiplier="0.4" id="dDR-a7-7ww"/>
@@ -4564,6 +4607,7 @@ terminación</string>
                             <constraint firstItem="h7f-Ej-eb2" firstAttribute="centerY" secondItem="9QK-26-Yxt" secondAttribute="centerY" id="mVh-U5-Agd"/>
                             <constraint firstItem="Caa-zc-zVt" firstAttribute="centerY" secondItem="9QK-26-Yxt" secondAttribute="centerY" multiplier="1.5" id="oK9-bC-xKW"/>
                             <constraint firstItem="QgM-ea-dRL" firstAttribute="width" secondItem="6cf-17-wVD" secondAttribute="width" id="sch-fI-c4J"/>
+                            <constraint firstItem="TdN-g1-fgP" firstAttribute="trailing" secondItem="f04-fP-OYm" secondAttribute="trailing" constant="20" id="vh1-gt-KVI"/>
                             <constraint firstItem="lo8-Qo-pVa" firstAttribute="centerX" secondItem="9QK-26-Yxt" secondAttribute="centerX" id="wfP-G0-3WH"/>
                             <constraint firstItem="nAX-sU-559" firstAttribute="top" secondItem="6cf-17-wVD" secondAttribute="bottom" constant="49" id="wx8-pw-8VC"/>
                             <constraint firstItem="GL4-Fr-XiW" firstAttribute="width" secondItem="6cf-17-wVD" secondAttribute="width" id="yK4-B2-XE1"/>
@@ -4581,6 +4625,7 @@ terminación</string>
                         <outlet property="propuestaPicker" destination="h7f-Ej-eb2" id="kb7-yq-VJg"/>
                         <outlet property="quienPicker" destination="6cf-17-wVD" id="W3m-El-jAi"/>
                         <segue destination="l14-wb-6E9" kind="show" identifier="SecondVideo" id="xqa-F8-xF1"/>
+                        <segue destination="NQ9-yz-sQG" kind="show" identifier="irPuntos" id="BY9-nv-Uid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hz-lC-0t8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4642,10 +4687,16 @@ terminación</string>
                                     <action selector="playVideoSindrome:" destination="l14-wb-6E9" eventType="touchUpInside" id="9QP-2g-HfQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-ss-Wbv">
+                                <rect key="frame" x="701" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="height" secondItem="wcp-He-HUc" secondAttribute="height" multiplier="0.2" id="4CK-YF-sW3"/>
+                            <constraint firstItem="dPE-ss-Wbv" firstAttribute="top" secondItem="Ikd-Lk-jME" secondAttribute="top" id="7S7-7X-U4V"/>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="centerY" secondItem="wcp-He-HUc" secondAttribute="centerY" id="9Z7-X7-s8c"/>
                             <constraint firstItem="YVy-H3-JQF" firstAttribute="centerX" secondItem="wcp-He-HUc" secondAttribute="centerX" multiplier="1.65" id="BKq-7i-9Hl"/>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="centerX" secondItem="wcp-He-HUc" secondAttribute="centerX" multiplier="0.35" id="BrF-Od-v4I"/>
@@ -4663,6 +4714,7 @@ terminación</string>
                             <constraint firstItem="r2W-PY-Opp" firstAttribute="height" secondItem="OxJ-Ay-aIM" secondAttribute="height" id="lSE-KT-I0A"/>
                             <constraint firstItem="YVy-H3-JQF" firstAttribute="width" secondItem="OxJ-Ay-aIM" secondAttribute="width" id="vaE-xP-819"/>
                             <constraint firstItem="r2W-PY-Opp" firstAttribute="width" secondItem="OxJ-Ay-aIM" secondAttribute="width" id="x3R-Qz-GUE"/>
+                            <constraint firstItem="Ikd-Lk-jME" firstAttribute="trailing" secondItem="dPE-ss-Wbv" secondAttribute="trailing" constant="20" id="xQc-xw-jqP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ikd-Lk-jME"/>
                     </view>
@@ -4890,6 +4942,12 @@ terminación</string>
                         <outlet property="casoClinico" destination="QgJ-Jo-rKq" id="yw0-u9-olP"/>
                         <outlet property="celulas" destination="G1F-Eh-vCE" id="liM-h3-UAQ"/>
                         <outlet property="dogma" destination="8dI-c7-VCZ" id="wfZ-ja-7be"/>
+                        <outlet property="imgAvatar" destination="4uS-mQ-H95" id="jHk-o0-QuH"/>
+                        <outlet property="imgCasosClinicos" destination="q5y-w3-FIO" id="ZWI-SB-qJ0"/>
+                        <outlet property="imgCelulas" destination="g5U-6x-uHi" id="vyo-xx-CdZ"/>
+                        <outlet property="imgDogma" destination="eey-hc-vw7" id="TsK-Bk-WIb"/>
+                        <outlet property="imgRompecabezas" destination="UTd-3k-vCu" id="Lbt-WN-3yP"/>
+                        <outlet property="imgStorytelling" destination="Pow-TO-IBQ" id="CBP-vK-Wd1"/>
                         <outlet property="nombreAlumno" destination="aaF-se-ZsV" id="5zf-Ba-SFv"/>
                         <outlet property="rompecabezas" destination="xYV-Yo-an6" id="gqP-Kc-uPY"/>
                         <outlet property="storytelling" destination="8Rp-hv-oCd" id="uci-gN-li5"/>
@@ -5056,9 +5114,18 @@ terminación</string>
                                     <action selector="goFirstVideo:" destination="0kr-bB-laT" eventType="touchUpInside" id="2JG-sa-8Ex"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-X7-inz">
+                                <rect key="frame" x="705" y="20" width="113" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ir a puntos"/>
+                                <connections>
+                                    <action selector="irPuntos:" destination="0kr-bB-laT" eventType="touchUpInside" id="abY-vW-tue"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Tfc-X7-inz" firstAttribute="top" secondItem="3qL-lh-SRE" secondAttribute="top" id="1Tg-Pl-5nB"/>
                             <constraint firstItem="RjZ-hv-gf3" firstAttribute="width" secondItem="lOI-S0-5dn" secondAttribute="width" multiplier="0.7" id="2TM-9K-AhY"/>
                             <constraint firstItem="WTi-Gu-Iiv" firstAttribute="centerY" secondItem="lOI-S0-5dn" secondAttribute="centerY" multiplier="1.3" id="7oG-bH-CgF"/>
                             <constraint firstItem="l75-PB-GPS" firstAttribute="width" secondItem="SdT-qB-zFN" secondAttribute="width" id="9Ln-LR-PvS"/>
@@ -5066,6 +5133,7 @@ terminación</string>
                             <constraint firstItem="Qnq-Lp-5n2" firstAttribute="centerY" secondItem="lOI-S0-5dn" secondAttribute="centerY" multiplier="1.25" id="Bz5-wr-6dm"/>
                             <constraint firstItem="SdT-qB-zFN" firstAttribute="centerX" secondItem="lOI-S0-5dn" secondAttribute="centerX" multiplier="0.35" id="Cyu-5C-VUb"/>
                             <constraint firstItem="gSr-yi-0wg" firstAttribute="centerY" secondItem="lOI-S0-5dn" secondAttribute="centerY" multiplier="1.25" id="DKb-my-0f0"/>
+                            <constraint firstItem="3qL-lh-SRE" firstAttribute="trailing" secondItem="Tfc-X7-inz" secondAttribute="trailing" constant="16" id="DTE-aa-fMu"/>
                             <constraint firstItem="iTA-ga-vPN" firstAttribute="centerX" secondItem="lOI-S0-5dn" secondAttribute="centerX" multiplier="1.65" id="DVb-fC-v0r"/>
                             <constraint firstItem="pzZ-ou-Yok" firstAttribute="width" secondItem="SdT-qB-zFN" secondAttribute="width" id="EZ3-f3-hYf"/>
                             <constraint firstItem="3qL-lh-SRE" firstAttribute="trailing" secondItem="oyG-qx-QXG" secondAttribute="trailing" constant="16" id="EaO-dL-lTE"/>
@@ -5102,6 +5170,7 @@ terminación</string>
                         <segue destination="asl-Lo-h4Z" kind="show" identifier="CelulaAnimal" id="tGM-0Y-srT"/>
                         <segue destination="VAF-RT-26W" kind="show" identifier="CelulaVegetal" id="Mjg-u4-9J9"/>
                         <segue destination="3Ie-8C-ega" kind="show" identifier="CelulaBacteriana" id="pbD-yn-epM"/>
+                        <segue destination="NQ9-yz-sQG" kind="show" identifier="irPuntos" id="NT1-Ca-FPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5N-cX-GHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5138,7 +5207,9 @@ terminación</string>
         <image name="logo" width="685" height="562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1i9-X6-Eet"/>
+        <segue reference="Mjg-u4-9J9"/>
+        <segue reference="dH3-cj-qeg"/>
+        <segue reference="5YU-xo-YvJ"/>
         <segue reference="lRd-oa-NlZ"/>
         <segue reference="M7q-NQ-0w0"/>
     </inferredMetricsTieBreakers>

@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct ViewStateCelulaBacteriana {
+    static var state = false
+}
+
 class CelulaBacterianaViewController: UIViewController {
 
     @IBOutlet weak var plasmidos: UITextField!
@@ -60,6 +64,7 @@ class CelulaBacterianaViewController: UIViewController {
         if plasmidos.text == "1" && proteina.text == "3" && flagelo.text == "8" && ribosoma.text == "10" && membranaPlasmatica.text == "5" && pilus.text == "9" && glicocalix.text == "7" && paredCelular.text == "6" && fimbria.text == "4" && citoplasma.text == "2" && informacion.text == "1" && espacioOrganelos.text == "2"  && pegarSuperficie.text == "7" && movilidadCelular.text == "8" && macromolecula.text == "3" && microvellosidad.text == "4" && intercambioInformacion.text == "9" && bicapaLipidica.text == "5" && entradaSustancias.text == "6" && produccionProteinas.text == "10" {
             
             tiempo.text = tiempoCelulaBacteriana.text
+            ViewStateCelulaBacteriana.state = true
             performSegue(withIdentifier: "goBack", sender: self)
         }
         if plasmidos.text == "1" {

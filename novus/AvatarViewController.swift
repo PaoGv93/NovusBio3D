@@ -9,6 +9,10 @@
 import UIKit
 import AVKit
 
+struct ViewStateAvatar {
+    static var state = false
+}
+
 class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let nombre = ["DNA GIRASA SUBUNIDAD A", "TAQ POLIMERASA", "FACTOR SIGMA", "RNA POLIMERASA", "RNA DE TRANSFERENCIA DE FENILALANINA", "FACTOR DE TERMINACION DE LA TRANSCRIPCION RHO", "ROBISOMA 70S"]
@@ -21,9 +25,9 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBOutlet weak var textLabel: UILabel!
     var finalName = String()
+
     
     @IBOutlet weak var imagenMolecula: UIImageView!
-    @IBOutlet weak var atpAvatar: UILabel!
     
     @IBOutlet weak var nombrePickerTextField: UITextField!
     @IBOutlet weak var clasificacionPickerTextField: UITextField!
@@ -31,6 +35,12 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var estequiometriaPickerTextField: UITextField!
     @IBOutlet weak var pesoPickerTextField: UITextField!
     @IBOutlet weak var ecPickerTextField: UITextField!
+    
+    //Ir a puntos finales
+    @IBAction func irPuntos(_ sender: Any) {
+        performSegue(withIdentifier: "irPuntos", sender: self)
+    }
+    
     
     @IBAction func goPDB(_ sender: Any) {
         if textLabel.text == "1SUU" {
@@ -189,6 +199,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "1PVO" {
             if( nombrePickerTextField.text == "FACTOR DE TERMINACION DE LA TRANSCRIPCION RHO" && clasificacionPickerTextField.text == "TRANSCRIPCION/RNA" && asimetriaPickerTextField.text == "HELICAL-H" && estequiometriaPickerTextField.text == "HOMO 6 CADENAS" && pesoPickerTextField.text == "288290.13" && ecPickerTextField.text == "3.6.4.-.") {*/
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
         /*
             }

@@ -20,6 +20,13 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
     @IBOutlet weak var casoClinico: UILabel!
     @IBOutlet weak var nombreAlumno: UITextField!
     
+    @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var imgCelulas: UIImageView!
+    @IBOutlet weak var imgDogma: UIImageView!
+    @IBOutlet weak var imgRompecabezas: UIImageView!
+    @IBOutlet weak var imgStorytelling: UIImageView!
+    @IBOutlet weak var imgCasosClinicos: UIImageView!
+
     
     @IBAction func startAgain(_ sender: Any) {
         performSegue(withIdentifier: "startAgain", sender: self)
@@ -27,6 +34,39 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.applyRoundCorner(imgAvatar)
+        self.applyRoundCorner(imgCelulas)
+        self.applyRoundCorner(imgDogma)
+        self.applyRoundCorner(imgRompecabezas)
+        self.applyRoundCorner(imgStorytelling)
+        self.applyRoundCorner(imgCasosClinicos)
+
+        let stateAvatar = ViewStateAvatar.state
+        let stateCelulas = ViewStateGeneralCelulas.state
+        let stateDogma = ViewStateGeneralDogma.state
+        let stateRompecabezas = ViewStateRompecabezas.state
+        let stateStorytelling = ViewStateStorytelling.state
+        let stateCasos = ViewStateGeneralCasos.state
+
+        if(stateAvatar == true){
+            imgAvatar.image = UIImage(named: "evv")
+        }
+        if(stateCelulas == true){
+            imgCelulas.image = UIImage(named: "celulaAnimal")
+        }
+        if(stateDogma == true){
+            imgDogma.image = UIImage(named: "imgdogma")
+        }
+        if(stateRompecabezas == true){
+            imgRompecabezas.image = UIImage(named: "rompecabezas")
+        }
+        if(stateStorytelling == true){
+            imgStorytelling.image = UIImage(named: "COMO2")
+        }
+        if(stateCasos == true){
+            imgCasosClinicos.image = UIImage(named: "casosClinicos")
+        }
 
     }
 
@@ -67,6 +107,17 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
         let action = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil)
         alertMessage.addAction(action)
         self.present(alertMessage, animated: true, completion: nil)
+    }
+    
+    func applyRoundCorner(_ object:AnyObject) {
+        //Boton circular
+        object.layer.cornerRadius = object.size.width / 2.0
+        object.layer.masksToBounds = true
+        
+        //Sombra
+        object.layer.shadowRadius = 3
+        object.layer.shadowOpacity = 0.8
+        object.layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
 }

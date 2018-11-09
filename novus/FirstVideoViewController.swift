@@ -9,11 +9,20 @@ import AVFoundation
 import UIKit
 import AVKit
 
+struct ViewStateGeneralDogma {
+    static var state = false
+}
+
 class FirstVideoViewController: UIViewController {
 
     @IBOutlet weak var botonReplicacion: UIButton!
     @IBOutlet weak var botonTranscripcion: UIButton!
     @IBOutlet weak var botonTraduccion: UIButton!
+    
+    //ir a los puntos finales
+    @IBAction func irPuntos(_ sender: Any) {
+        performSegue(withIdentifier: "irPuntos", sender: self)
+    }
     
     @IBAction func goReplicacion(_ sender: Any) {
         performSegue(withIdentifier: "Replicacion", sender: self)
@@ -28,7 +37,18 @@ class FirstVideoViewController: UIViewController {
     }
     
     @IBAction func goSopaLetras(_ sender: Any) {
+        if (ViewStateVideoTranscripcion.state == true && ViewStateVideoReplicacion.state == true && ViewStateVideoTraduccion.state == true){
         performSegue(withIdentifier: "goSopaLetras", sender: self)
+        } else{
+            // create the alert
+            let alert = UIAlertController(title: "Error", message: "Debes ver todos los videos.", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
