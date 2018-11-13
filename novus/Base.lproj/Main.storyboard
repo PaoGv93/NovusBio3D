@@ -2308,7 +2308,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Checar"/>
                                 <connections>
-                                    <action selector="goJuego:" destination="OkS-lb-O4y" eventType="touchUpInside" id="qWh-YH-Pxs"/>
+                                    <action selector="checar:" destination="OkS-lb-O4y" eventType="touchUpInside" id="Rsi-V9-8l7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hlu-fW-eLo">
@@ -2904,47 +2904,54 @@
                         <viewLayoutGuide key="safeArea" id="zK1-dg-3qO"/>
                     </view>
                     <connections>
-                        <outlet property="Five_2A" destination="cGi-Ik-Bhx" id="lVh-g9-4zo"/>
-                        <outlet property="Five_2K" destination="FBh-Ky-zkX" id="aaT-CH-Dzp"/>
-                        <outlet property="Five_A" destination="sqa-oV-Sfd" id="SOJ-Ge-p7O"/>
-                        <outlet property="Five_I" destination="7aZ-f7-Mi2" id="umx-OG-6gU"/>
-                        <outlet property="Five_K" destination="pcV-ie-qcW" id="glw-Wa-sSp"/>
-                        <outlet property="Five_O" destination="ADZ-jw-ifr" id="7Ez-Ki-z93"/>
-                        <outlet property="Five_Z" destination="IQV-Y7-fsE" id="wzb-AG-ftW"/>
-                        <outlet property="Four_2A" destination="ro6-oC-DyE" id="dw4-8F-kE2"/>
-                        <outlet property="Four_2O" destination="Dyk-WF-egs" id="iH8-hs-M33"/>
-                        <outlet property="Four_3O" destination="Hlu-fW-eLo" id="deE-Eb-K99"/>
-                        <outlet property="Four_A" destination="B2o-uG-ZdH" id="9Y0-eO-vmx"/>
-                        <outlet property="Four_I" destination="gYj-Re-2wc" id="Wr5-ER-pLV"/>
-                        <outlet property="Four_M" destination="zrV-1X-ee0" id="ZZE-bI-JJG"/>
-                        <outlet property="Four_O" destination="mig-2M-Avi" id="bA6-L2-KqL"/>
-                        <outlet property="Four_P" destination="oI3-K3-x4L" id="eZW-8i-Km5"/>
-                        <outlet property="Four_R" destination="Nra-mX-HrP" id="Upr-x7-BKZ"/>
-                        <outlet property="Four_T" destination="7iu-88-CZa" id="vMI-el-dPW"/>
-                        <outlet property="One_2A" destination="kBd-IJ-5BL" id="rwP-3B-nf2"/>
-                        <outlet property="One_A" destination="7fw-SU-W4n" id="3Ld-AD-YrB"/>
-                        <outlet property="One_G" destination="bZ3-Bp-jHp" id="sci-2B-VP3"/>
-                        <outlet property="One_I" destination="wRh-p6-Fry" id="PtI-Kb-shd"/>
-                        <outlet property="One_L" destination="Fbe-Es-qbp" id="guS-Tv-mqY"/>
-                        <outlet property="One_S" destination="FTA-UX-lNz" id="QLf-dR-2uE"/>
-                        <outlet property="Seven_D" destination="Bug-Bj-ZZn" id="9mK-cT-oUf"/>
-                        <outlet property="Seven_N" destination="Cct-CO-GMt" id="14G-9e-NnL"/>
-                        <outlet property="Six_I" destination="lZc-iT-hBi" id="Kjt-b3-ORD"/>
-                        <outlet property="Six_M" destination="b2Z-Wf-hd9" id="sQ9-7t-zpn"/>
-                        <outlet property="Six_P" destination="aUc-K8-BmG" id="Te9-fU-Tz9"/>
-                        <outlet property="Six_R" destination="2eY-0T-yY7" id="RHU-cA-cX6"/>
-                        <outlet property="Six_S" destination="RqH-Kl-PEr" id="hxi-Ia-azH"/>
-                        <outlet property="Three_2S" destination="RmK-cM-RbQ" id="nZG-nI-bYL"/>
-                        <outlet property="Three_B" destination="LhV-tn-wpQ" id="jVp-bM-eEk"/>
-                        <outlet property="Three_S" destination="BmZ-ow-vkP" id="jFR-5z-DEb"/>
-                        <outlet property="Two_2A" destination="1V9-1c-S0T" id="Rae-0T-1A9"/>
-                        <outlet property="Two_A" destination="dYk-2b-gOy" id="DMb-B0-aDU"/>
-                        <outlet property="Two_C" destination="o5K-oO-sKk" id="KXw-On-1yS"/>
-                        <outlet property="Two_E" destination="PlG-B0-jj3" id="o1O-Zb-w3G"/>
-                        <outlet property="Two_H" destination="F8s-Ti-9zL" id="cET-25-AGV"/>
-                        <outlet property="Two_I" destination="Cz4-ew-LHj" id="pdX-I6-wdh"/>
-                        <outlet property="Two_L" destination="Xg6-af-SuP" id="Mk2-n1-ehT"/>
-                        <outlet property="Two_S" destination="JS9-OQ-9AJ" id="28U-3S-KKi"/>
+                        <outlet property="Cinco1" destination="ADZ-jw-ifr" id="Bsz-l8-s23"/>
+                        <outlet property="Cinco2" destination="pcV-ie-qcW" id="vla-J0-hkT"/>
+                        <outlet property="Cinco3" destination="sqa-oV-Sfd" id="MOS-BH-u03"/>
+                        <outlet property="Cinco4" destination="IQV-Y7-fsE" id="Us1-TR-g6G"/>
+                        <outlet property="Cinco5" destination="cGi-Ik-Bhx" id="dsP-nM-0rE"/>
+                        <outlet property="Cinco6" destination="FBh-Ky-zkX" id="fVN-E0-Ge5"/>
+                        <outlet property="Cinco7" destination="7aZ-f7-Mi2" id="UTh-Ts-1ra"/>
+                        <outlet property="Cuatro1" destination="7iu-88-CZa" id="8Q2-eQ-pO0"/>
+                        <outlet property="Cuatro10" destination="Nra-mX-HrP" id="18x-eb-Enh"/>
+                        <outlet property="Cuatro11" destination="XE0-1X-5WG" id="WZe-yf-5LW"/>
+                        <outlet property="Cuatro12" destination="RmK-cM-RbQ" id="cBD-wd-mlp"/>
+                        <outlet property="Cuatro13" destination="ro6-oC-DyE" id="WQF-9v-8Zu"/>
+                        <outlet property="Cuatro2" destination="mig-2M-Avi" id="E30-m0-2Oc"/>
+                        <outlet property="Cuatro3" destination="oI3-K3-x4L" id="FVG-xE-uqm"/>
+                        <outlet property="Cuatro4" destination="Dyk-WF-egs" id="2CP-3S-Mh7"/>
+                        <outlet property="Cuatro5" destination="gYj-Re-2wc" id="0ED-tj-rzi"/>
+                        <outlet property="Cuatro6" destination="FTA-UX-lNz" id="n3U-Ic-AeJ"/>
+                        <outlet property="Cuatro7" destination="Hlu-fW-eLo" id="WYH-rw-ksG"/>
+                        <outlet property="Cuatro8" destination="zrV-1X-ee0" id="1Jr-yK-vSm"/>
+                        <outlet property="Cuatro9" destination="PlG-B0-jj3" id="9W7-qA-kQ2"/>
+                        <outlet property="Dos1" destination="F8s-Ti-9zL" id="C5u-OY-Cso"/>
+                        <outlet property="Dos2" destination="PlG-B0-jj3" id="8bt-R4-BCo"/>
+                        <outlet property="Dos3" destination="Xg6-af-SuP" id="FT9-0t-TII"/>
+                        <outlet property="Dos4" destination="Cz4-ew-LHj" id="MGQ-cK-9FL"/>
+                        <outlet property="Dos5" destination="o5K-oO-sKk" id="gDw-Dh-tl3"/>
+                        <outlet property="Dos6" destination="dYk-2b-gOy" id="dq0-Hd-cSS"/>
+                        <outlet property="Dos7" destination="JS9-OQ-9AJ" id="7eZ-Km-ub6"/>
+                        <outlet property="Dos8" destination="1V9-1c-S0T" id="Tcl-Fe-y0z"/>
+                        <outlet property="Seis1" destination="aUc-K8-BmG" id="kTq-6b-RrL"/>
+                        <outlet property="Seis2" destination="2eY-0T-yY7" id="a7i-es-4xR"/>
+                        <outlet property="Seis3" destination="lZc-iT-hBi" id="W06-tL-LZG"/>
+                        <outlet property="Seis4" destination="b2Z-Wf-hd9" id="Xvm-hg-tao"/>
+                        <outlet property="Seis5" destination="sqa-oV-Sfd" id="pKe-Ag-q1n"/>
+                        <outlet property="Seis6" destination="RqH-Kl-PEr" id="mFN-e9-ZzC"/>
+                        <outlet property="Seis7" destination="dYk-2b-gOy" id="wPg-Ax-3SC"/>
+                        <outlet property="Siete1" destination="1V9-1c-S0T" id="CRg-Pz-FLu"/>
+                        <outlet property="Siete2" destination="Bug-Bj-ZZn" id="mSp-pH-vpV"/>
+                        <outlet property="Siete3" destination="Cct-CO-GMt" id="gjT-MY-hi5"/>
+                        <outlet property="Tres1" destination="BmZ-ow-vkP" id="4zH-Th-C4R"/>
+                        <outlet property="Tres2" destination="RmK-cM-RbQ" id="N18-aF-ZmN"/>
+                        <outlet property="Tres3" destination="LhV-tn-wpQ" id="rXQ-yZ-uIg"/>
+                        <outlet property="Uno1" destination="Fbe-Es-qbp" id="1WF-if-6qj"/>
+                        <outlet property="Uno2" destination="wRh-p6-Fry" id="yaa-hc-BEi"/>
+                        <outlet property="Uno3" destination="bZ3-Bp-jHp" id="01X-w2-hjv"/>
+                        <outlet property="Uno4" destination="7fw-SU-W4n" id="BqU-L8-7nm"/>
+                        <outlet property="Uno5" destination="FTA-UX-lNz" id="3jr-yd-8AY"/>
+                        <outlet property="Uno6" destination="kBd-IJ-5BL" id="IR0-Kx-xld"/>
+                        <segue destination="QDh-Pl-D4U" kind="show" identifier="goBack" id="zGq-80-aQy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnX-hJ-sxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3011,6 +3018,9 @@
                                 <rect key="frame" x="385" y="1055" width="64" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Checar"/>
+                                <connections>
+                                    <action selector="checar:" destination="Wjb-eF-kTX" eventType="touchUpInside" id="q3c-V8-DlP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syk-yQ-goG">
                                 <rect key="frame" x="401" y="80.5" width="6.5" height="17"/>
@@ -3813,6 +3823,75 @@ proteína.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="56v-xP-9q3"/>
                     </view>
+                    <connections>
+                        <outlet property="Cinco1" destination="Qj9-6F-p5J" id="D3j-nW-Kg3"/>
+                        <outlet property="Cinco2" destination="tji-Tb-Ho9" id="SSD-PK-T5W"/>
+                        <outlet property="Cinco3" destination="mhh-ND-tua" id="dPD-ce-DBw"/>
+                        <outlet property="Cinco4" destination="BWV-S6-i8Z" id="d5M-ij-cOG"/>
+                        <outlet property="Cinco5" destination="t7V-wh-viH" id="Eq3-Ym-j8Y"/>
+                        <outlet property="Cinco6" destination="LoA-Ku-UpZ" id="nHi-bX-usr"/>
+                        <outlet property="Cinco7" destination="Ate-lF-lLd" id="Vgd-Kh-DWn"/>
+                        <outlet property="Cinco8" destination="Osy-YX-Nui" id="Ouf-d6-FUO"/>
+                        <outlet property="Cinco9" destination="HoE-3L-Q42" id="c5d-kD-li4"/>
+                        <outlet property="Cuatro1" destination="n15-9m-jX7" id="3KF-a4-iO6"/>
+                        <outlet property="Cuatro2" destination="b4P-O4-5Gr" id="I3G-h9-NMH"/>
+                        <outlet property="Cuatro3" destination="tji-Tb-Ho9" id="rdU-LA-Jov"/>
+                        <outlet property="Cuatro4" destination="kKf-7e-Zu5" id="uMW-3K-6EE"/>
+                        <outlet property="Dos1" destination="BJy-VO-JID" id="DLP-jd-XfZ"/>
+                        <outlet property="Dos2" destination="rRj-J2-sa1" id="kvo-A4-1nb"/>
+                        <outlet property="Dos3" destination="TlV-Em-I62" id="T6x-XD-GDl"/>
+                        <outlet property="Dos4" destination="dEg-9z-iB1" id="N2w-2m-Al1"/>
+                        <outlet property="Dos5" destination="gYx-12-s06" id="bO6-mF-Hwq"/>
+                        <outlet property="Dos6" destination="ub0-pt-ToF" id="Unw-YV-9TH"/>
+                        <outlet property="Dos7" destination="936-Qy-dqz" id="efZ-CZ-F48"/>
+                        <outlet property="Dos8" destination="Vi7-3L-7Yd" id="ddp-4T-7Z5"/>
+                        <outlet property="Ocho1" destination="3rF-3C-6mH" id="62k-27-SwV"/>
+                        <outlet property="Ocho10" destination="cMu-LN-YaK" id="L7b-gE-5Or"/>
+                        <outlet property="Ocho11" destination="b2m-j9-07Y" id="3WS-nb-vvi"/>
+                        <outlet property="Ocho12" destination="rDo-iU-n1m" id="gDh-Sc-vQy"/>
+                        <outlet property="Ocho13" destination="lfx-Ym-PBa" id="cos-tj-Z85"/>
+                        <outlet property="Ocho2" destination="oEW-MU-llb" id="DC2-rr-adY"/>
+                        <outlet property="Ocho3" destination="cRl-NW-ZRD" id="dNd-gB-5ee"/>
+                        <outlet property="Ocho4" destination="CGt-Ch-Lcm" id="Nsd-zR-9fd"/>
+                        <outlet property="Ocho5" destination="SDS-Tn-Koa" id="aT1-bN-5j3"/>
+                        <outlet property="Ocho6" destination="9PZ-XE-PQA" id="157-Q6-kuU"/>
+                        <outlet property="Ocho7" destination="qe3-yf-XKV" id="goj-mw-nIA"/>
+                        <outlet property="Ocho8" destination="aTu-IC-UOb" id="FB3-5c-4xz"/>
+                        <outlet property="Ocho9" destination="1gT-v8-KPO" id="cd6-vg-w0t"/>
+                        <outlet property="Seis1" destination="J2Y-e6-5SU" id="R3k-6R-RHx"/>
+                        <outlet property="Seis2" destination="ScB-TP-tyT" id="d68-zE-QQI"/>
+                        <outlet property="Seis3" destination="ZnH-Ob-U9a" id="c74-ty-p5J"/>
+                        <outlet property="Seis4" destination="24H-Ak-Q95" id="WtD-hc-0B5"/>
+                        <outlet property="Seis5" destination="vgC-4B-KNb" id="vUt-GH-Hub"/>
+                        <outlet property="Siete1" destination="fbr-XN-Md9" id="YZW-E8-no7"/>
+                        <outlet property="Siete2" destination="10J-jk-096" id="hU0-Rc-Izg"/>
+                        <outlet property="Siete3" destination="lfx-Ym-PBa" id="Jjd-fH-M1O"/>
+                        <outlet property="Siete4" destination="C2g-66-soc" id="IPm-yg-mSk"/>
+                        <outlet property="Tres1" destination="o8r-NZ-A3G" id="hMd-IP-MVI"/>
+                        <outlet property="Tres2" destination="Vul-Hw-Zgb" id="q7c-Aw-TxY"/>
+                        <outlet property="Tres3" destination="WFs-UX-5lt" id="y06-JH-b6c"/>
+                        <outlet property="Tres4" destination="LoA-Ku-UpZ" id="TqP-rB-FxN"/>
+                        <outlet property="Tres5" destination="eDI-qD-iRr" id="XKf-nf-gfC"/>
+                        <outlet property="Tres6" destination="24H-Ak-Q95" id="cHI-cO-kWQ"/>
+                        <outlet property="Tres7" destination="wA6-yn-ccS" id="Jxg-MB-kbk"/>
+                        <outlet property="Tres8" destination="cRl-NW-ZRD" id="dvA-ZF-3Xy"/>
+                        <outlet property="Uno1" destination="OGZ-Lj-b3o" id="cEX-rB-PRy"/>
+                        <outlet property="Uno10" destination="HoE-3L-Q42" id="e7i-dh-PLX"/>
+                        <outlet property="Uno11" destination="am9-j8-uYV" id="oUX-L7-s4u"/>
+                        <outlet property="Uno12" destination="cZK-06-2hD" id="LCd-0L-T94"/>
+                        <outlet property="Uno13" destination="fxp-jn-LTP" id="Epp-OL-sdH"/>
+                        <outlet property="Uno14" destination="9PZ-XE-PQA" id="uP7-dR-R1V"/>
+                        <outlet property="Uno15" destination="jsE-wr-kxe" id="zT2-Tp-npF"/>
+                        <outlet property="Uno2" destination="TcN-ig-yL8" id="3xc-oR-4D5"/>
+                        <outlet property="Uno3" destination="Q7E-Kw-dhe" id="90t-kh-gQD"/>
+                        <outlet property="Uno4" destination="yIb-D6-cOi" id="daW-LJ-Toa"/>
+                        <outlet property="Uno5" destination="kkm-ep-hHO" id="Bad-ym-MNn"/>
+                        <outlet property="Uno6" destination="TlV-Em-I62" id="b0U-pe-X1a"/>
+                        <outlet property="Uno7" destination="O10-TD-ozV" id="Ba0-Cd-Q7m"/>
+                        <outlet property="Uno8" destination="oUu-XY-UN2" id="MfI-f8-Uhu"/>
+                        <outlet property="Uno9" destination="ANA-sk-FvX" id="tlt-WA-IqZ"/>
+                        <segue destination="QDh-Pl-D4U" kind="show" identifier="goBack" id="Sbc-5b-dyr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYj-wn-Jvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3830,6 +3909,9 @@ proteína.</string>
                                 <rect key="frame" x="385" y="1038.5" width="64" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Checar"/>
+                                <connections>
+                                    <action selector="checarPalabra:" destination="lSa-NW-8q3" eventType="touchUpInside" id="bBL-Lh-sIg"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="azR-5r-oO6">
                                 <rect key="frame" x="97" y="679.5" width="306.5" height="198"/>
@@ -4424,6 +4506,55 @@ terminación</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6l-gu-Ezw"/>
                     </view>
+                    <connections>
+                        <outlet property="Cinco1" destination="f2o-n1-2wJ" id="VuO-SJ-ckh"/>
+                        <outlet property="Cinco10" destination="pjz-Rd-iAe" id="kac-nd-f43"/>
+                        <outlet property="Cinco2" destination="sPa-wb-2ST" id="j2y-Qt-bel"/>
+                        <outlet property="Cinco3" destination="jSg-Nr-weg" id="GMU-7D-BOn"/>
+                        <outlet property="Cinco4" destination="2MG-m0-9E3" id="vdu-RT-JdS"/>
+                        <outlet property="Cinco5" destination="mfA-Qz-MzB" id="7Yu-GB-oMn"/>
+                        <outlet property="Cinco6" destination="dR2-Dk-NHn" id="6Ol-gT-Q9q"/>
+                        <outlet property="Cinco7" destination="hOf-G3-ZfH" id="d7q-L2-9a1"/>
+                        <outlet property="Cinco8" destination="psj-qC-EY6" id="bgb-Lc-R5b"/>
+                        <outlet property="Cinco9" destination="GcQ-uM-QTH" id="W48-8s-Iyt"/>
+                        <outlet property="Cuatro1" destination="ER4-tF-gb6" id="VRt-6v-rzn"/>
+                        <outlet property="Cuatro2" destination="dR2-Dk-NHn" id="vV8-0v-76v"/>
+                        <outlet property="Cuatro3" destination="nYQ-jF-pPS" id="Wmm-4f-ZYq"/>
+                        <outlet property="Dos1" destination="MH0-XA-NyT" id="ooV-Ae-YYS"/>
+                        <outlet property="Dos2" destination="haX-Cb-lVK" id="iXv-9B-nzN"/>
+                        <outlet property="Dos3" destination="HhJ-Zo-FqW" id="Gw9-za-us0"/>
+                        <outlet property="Dos4" destination="50F-6E-MBN" id="gli-f4-zyP"/>
+                        <outlet property="Dos5" destination="pjz-Rd-iAe" id="r6k-8h-8SK"/>
+                        <outlet property="Dos6" destination="QGk-Jj-u7A" id="qdK-d7-cKa"/>
+                        <outlet property="Dos7" destination="THh-BS-mcH" id="ema-LV-fJI"/>
+                        <outlet property="Dos8" destination="8CF-g4-v8f" id="Q70-pS-g6t"/>
+                        <outlet property="Dos9" destination="vRq-5c-8g2" id="e8R-Ug-cih"/>
+                        <outlet property="Nueve1" destination="kwa-aq-M3n" id="IiL-I1-6V0"/>
+                        <outlet property="Nueve2" destination="FX5-df-LBD" id="eH3-wZ-VvA"/>
+                        <outlet property="Nueve3" destination="vRq-5c-8g2" id="NsE-hs-gIQ"/>
+                        <outlet property="Ocho1" destination="I3u-4a-RLl" id="ulG-Th-TSW"/>
+                        <outlet property="Ocho2" destination="B9W-zT-XWf" id="qNa-ni-vm4"/>
+                        <outlet property="Ocho3" destination="jJv-N5-Nmo" id="g9v-lE-OzN"/>
+                        <outlet property="Ocho4" destination="eop-fm-211" id="C0K-HW-ZOR"/>
+                        <outlet property="Seis1" destination="2MG-m0-9E3" id="W3Q-Kb-Yuj"/>
+                        <outlet property="Seis2" destination="k54-iV-9vH" id="qz9-yn-27Y"/>
+                        <outlet property="Seis3" destination="vQD-ub-Q1F" id="Ghz-PU-RrX"/>
+                        <outlet property="Seis4" destination="arf-3I-aPr" id="xgQ-mf-dcK"/>
+                        <outlet property="Seis5" destination="jJv-N5-Nmo" id="WR2-JE-qUC"/>
+                        <outlet property="Seis6" destination="1o8-nL-Y8g" id="aTG-pN-W0L"/>
+                        <outlet property="Siete1" destination="uCD-WN-2e4" id="HWv-MJ-5wT"/>
+                        <outlet property="Siete2" destination="kwa-aq-M3n" id="ZIE-mS-IHu"/>
+                        <outlet property="Siete3" destination="TtU-07-Dsg" id="xKd-Ib-6rk"/>
+                        <outlet property="Tres1" destination="6vG-w9-Ygr" id="sSM-0j-rVq"/>
+                        <outlet property="Tres2" destination="LaQ-8i-QkS" id="Qgb-CY-un4"/>
+                        <outlet property="Tres3" destination="f2o-n1-2wJ" id="bDT-nx-mib"/>
+                        <outlet property="Uno1" destination="5e9-c0-Jsn" id="OZG-wq-IPt"/>
+                        <outlet property="Uno2" destination="XjX-Gw-2Ig" id="96O-LB-gFq"/>
+                        <outlet property="Uno3" destination="n9e-Da-m0F" id="t7l-o9-AkE"/>
+                        <outlet property="Uno4" destination="6CG-I9-OgQ" id="cQV-9O-g8C"/>
+                        <outlet property="Uno5" destination="psj-qC-EY6" id="1B0-vL-xHa"/>
+                        <segue destination="QDh-Pl-D4U" kind="show" identifier="goBack" id="fXy-oc-rNU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gR9-0k-Grx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4542,7 +4673,7 @@ terminación</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-zc-zVt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-zc-zVt">
                                 <rect key="frame" x="41.5" y="834" width="751" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -4687,16 +4818,10 @@ terminación</string>
                                     <action selector="playVideoSindrome:" destination="l14-wb-6E9" eventType="touchUpInside" id="9QP-2g-HfQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-ss-Wbv">
-                                <rect key="frame" x="701" y="20" width="113" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Ir a puntos"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="height" secondItem="wcp-He-HUc" secondAttribute="height" multiplier="0.2" id="4CK-YF-sW3"/>
-                            <constraint firstItem="dPE-ss-Wbv" firstAttribute="top" secondItem="Ikd-Lk-jME" secondAttribute="top" id="7S7-7X-U4V"/>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="centerY" secondItem="wcp-He-HUc" secondAttribute="centerY" id="9Z7-X7-s8c"/>
                             <constraint firstItem="YVy-H3-JQF" firstAttribute="centerX" secondItem="wcp-He-HUc" secondAttribute="centerX" multiplier="1.65" id="BKq-7i-9Hl"/>
                             <constraint firstItem="OxJ-Ay-aIM" firstAttribute="centerX" secondItem="wcp-He-HUc" secondAttribute="centerX" multiplier="0.35" id="BrF-Od-v4I"/>
@@ -4714,7 +4839,6 @@ terminación</string>
                             <constraint firstItem="r2W-PY-Opp" firstAttribute="height" secondItem="OxJ-Ay-aIM" secondAttribute="height" id="lSE-KT-I0A"/>
                             <constraint firstItem="YVy-H3-JQF" firstAttribute="width" secondItem="OxJ-Ay-aIM" secondAttribute="width" id="vaE-xP-819"/>
                             <constraint firstItem="r2W-PY-Opp" firstAttribute="width" secondItem="OxJ-Ay-aIM" secondAttribute="width" id="x3R-Qz-GUE"/>
-                            <constraint firstItem="Ikd-Lk-jME" firstAttribute="trailing" secondItem="dPE-ss-Wbv" secondAttribute="trailing" constant="20" id="xQc-xw-jqP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ikd-Lk-jME"/>
                     </view>
@@ -5207,9 +5331,9 @@ terminación</string>
         <image name="logo" width="685" height="562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mjg-u4-9J9"/>
-        <segue reference="dH3-cj-qeg"/>
-        <segue reference="5YU-xo-YvJ"/>
+        <segue reference="ANZ-hG-WF8"/>
+        <segue reference="zGq-80-aQy"/>
+        <segue reference="a8P-za-v4B"/>
         <segue reference="lRd-oa-NlZ"/>
         <segue reference="M7q-NQ-0w0"/>
     </inferredMetricsTieBreakers>

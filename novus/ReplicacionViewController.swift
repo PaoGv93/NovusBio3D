@@ -21,7 +21,7 @@ class ReplicacionViewController: UIViewController {
     @IBAction func playVideo(_ sender: Any) {
         
         ViewStateVideoReplicacion.state = true
-        guard let url = URL(string: "https://youtu.be/r671Cr0vT-g") else { return }
+        guard let url = URL(string: "https://www.youtube.com/watch?v=QXlbLoVU8Cc") else { return }
         let safariViewController = SFSafariViewController(url: url)
         self.present(safariViewController, animated: true, completion: nil)
     }

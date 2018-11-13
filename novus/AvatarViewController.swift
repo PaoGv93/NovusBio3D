@@ -76,9 +76,10 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     //Validaciones de textfiled en boton
     @IBAction func goMolecule(_ sender: Any) {
-/*
+
         if textLabel.text == "1SUU" {
             if( nombrePickerTextField.text == "DNA GIRASA SUBUNIDAD A" && clasificacionPickerTextField.text == "ISOMERASA" && asimetriaPickerTextField.text == "ASIMETRIA-C1" && estequiometriaPickerTextField.text == "MONOMERICA" && pesoPickerTextField.text == "34508.72" && ecPickerTextField.text == "5.99.1.3") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -103,6 +104,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "1TAU" {
             if( nombrePickerTextField.text == "TAQ POLIMERASA" && clasificacionPickerTextField.text == "TRANSFERASA" && asimetriaPickerTextField.text == "ASIMETRIA-C1" && estequiometriaPickerTextField.text == "MONOMERICA" && pesoPickerTextField.text == "99259.27" && ecPickerTextField.text == "2.7.7.7") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -127,6 +129,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "2O8K" {
             if( nombrePickerTextField.text == "FACTOR SIGMA" && clasificacionPickerTextField.text == "TRANSCRIPCION/DNA" && asimetriaPickerTextField.text == "ASIMETRIA-C1" && estequiometriaPickerTextField.text == "MONOMERICA" && pesoPickerTextField.text == "16048.41" && ecPickerTextField.text == "NO ES ENZIMA") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -151,6 +154,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "4Q5S" {
             if( nombrePickerTextField.text == "RNA POLIMERASA" && clasificacionPickerTextField.text == "TRANSCRIPCION/DNA/RNA" && asimetriaPickerTextField.text == "ASIMETRIA-C1" && estequiometriaPickerTextField.text == "HETERO 6 CADENAS" && pesoPickerTextField.text == "443980.63" && ecPickerTextField.text == "2.7.7.6") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -175,6 +179,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "1EVV" {
             if( nombrePickerTextField.text == "RNA DE TRANSFERENCIA DE FENILALANINA" && clasificacionPickerTextField.text == "RNA" && asimetriaPickerTextField.text == "RAYOS X" && estequiometriaPickerTextField.text == "2A" && pesoPickerTextField.text == "25335.51" && ecPickerTextField.text == "NO ES ENZIMA") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -198,10 +203,10 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                 } else { ecPickerTextField.backgroundColor = .red }
             }
         } else if textLabel.text == "1PVO" {
-            if( nombrePickerTextField.text == "FACTOR DE TERMINACION DE LA TRANSCRIPCION RHO" && clasificacionPickerTextField.text == "TRANSCRIPCION/RNA" && asimetriaPickerTextField.text == "HELICAL-H" && estequiometriaPickerTextField.text == "HOMO 6 CADENAS" && pesoPickerTextField.text == "288290.13" && ecPickerTextField.text == "3.6.4.-.") {*/
+            if( nombrePickerTextField.text == "FACTOR DE TERMINACION DE LA TRANSCRIPCION RHO" && clasificacionPickerTextField.text == "TRANSCRIPCION/RNA" && asimetriaPickerTextField.text == "HELICAL-H" && estequiometriaPickerTextField.text == "HOMO 6 CADENAS" && pesoPickerTextField.text == "288290.13" && ecPickerTextField.text == "3.6.4.-.") {
                 ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
-        /*
+        
             }
             else {
                 if nombrePickerTextField.text == "FACTOR DE TERMINACION DE LA TRANSCRIPCION RHO" {
@@ -225,6 +230,7 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         } else if textLabel.text == "4V49" {
             if( nombrePickerTextField.text == "ROBISOMA 70S" && clasificacionPickerTextField.text == "RIBOSOMA" && asimetriaPickerTextField.text == "ASIMETRIA-C1" && estequiometriaPickerTextField.text == "HETERO 49 CADENAS" && pesoPickerTextField.text == "2193229.50" && ecPickerTextField.text == "ORGANELO") {
+                ViewStateAvatar.state = true
                 performSegue(withIdentifier: "molecule", sender: self)
             }
             else {
@@ -248,7 +254,6 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                 } else { ecPickerTextField.backgroundColor = .red }
             }
         }
-        */
     }
     
     var nombrePickerView = UIPickerView()

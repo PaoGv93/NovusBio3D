@@ -58,7 +58,6 @@ class StorytellingViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fraseFinal = "Francisco" + "fue atacado por el virus del ebola, " + "cuando convivia con la familia " + "ya que tomo un helado contaminado"  + "en un día muy lluvioso " + "en una casa de campo que teniamos " + "se tomará vitaminas."
         
         frase.text = fraseFinal
         

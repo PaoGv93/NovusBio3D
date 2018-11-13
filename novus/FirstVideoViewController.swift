@@ -38,6 +38,7 @@ class FirstVideoViewController: UIViewController {
     
     @IBAction func goSopaLetras(_ sender: Any) {
         if (ViewStateVideoTranscripcion.state == true && ViewStateVideoReplicacion.state == true && ViewStateVideoTraduccion.state == true){
+            ViewStateGeneralDogma.state = true
         performSegue(withIdentifier: "goSopaLetras", sender: self)
         } else{
             // create the alert

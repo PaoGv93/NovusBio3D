@@ -135,7 +135,8 @@ class CelulaBacterianaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         runTimer()
     }

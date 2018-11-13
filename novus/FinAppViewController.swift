@@ -84,6 +84,25 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
             } else {
                 showErrorMessage()
             }
+            
+            // create the alert
+            let alert = UIAlertController(title: "", message: "Enviado con éxito", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+        else{
+            // create the alert
+            let alert = UIAlertController(title: "Error", message: "Debes poner tu nombre para enviar", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -93,7 +112,7 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
         
         mailComposerVC.setToRecipients(["novusbio3d@gmail.com"])
         mailComposerVC.setSubject("Resumen App")
-        mailComposerVC.setMessageBody("Nombre del alumno: \(nombreAlumno) \n Tiempo Avatar: \(avatar) seg \n Tiempo Celulas: \(celulas) seg \n Tiempo Juego: \(dogma) seg \n Tiempo Storytelling: \(rompecabezas) seg \n Tiempo Storytelling: \(storytelling) seg \n Tiempo Storytelling: \(casoClinico) seg \n", isHTML: true)
+        mailComposerVC.setMessageBody("Nombre del alumno: \(nombreAlumno.text) \n Puntos Avatar: \(avatar.text) seg \n Puntos Celulas: \(celulas.text) seg \n Puntos Juego: \(dogma.text) seg \n Puntos Rompecabezas: \(rompecabezas.text) seg \n Puntos Storytelling: \(storytelling.text) seg \n Puntos casos Clinicos: \(casoClinico.text) seg \n", isHTML: false)
         
         return mailComposerVC
     }

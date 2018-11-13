@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import SafariServices
 
 struct ViewStateVideoTraduccion {
     static var state = false
@@ -20,17 +21,10 @@ class TraduccionViewController: UIViewController {
     
     @IBAction func playVideo(_ sender: Any) {
         
-        ViewStateVideoTraduccion.state = true
-        
-        if let path = Bundle.main.path(forResource: "video", ofType: "mp4") {
-            let videoURL = URL(fileURLWithPath: path)
-            let player = AVPlayer(url: videoURL)
-            let playerController = AVPlayerViewController()
-            playerController.player = player
-            present(playerController, animated: true, completion: {
-                player.play()
-            })
-        }
+        ViewStateVideoReplicacion.state = true
+        guard let url = URL(string: "https://www.youtube.com/watch?v=xiAXUw0T-Sw") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
