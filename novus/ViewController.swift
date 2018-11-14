@@ -46,13 +46,13 @@ class ViewController: UIViewController {
         image6.addGestureRecognizer(tapGesture6)
         image7.addGestureRecognizer(tapGesture7)
 
-        image1.loadGif(name: "1PVO")
+        /*image1.loadGif(name: "1PVO")
         image2.loadGif(name: "4V49")
         image3.loadGif(name: "1EVV")
         image4.loadGif(name: "4Q5S")
         image5.loadGif(name: "2O8K")
         image6.loadGif(name: "1TAU")
-        image7.loadGif(name: "1SUU")
+        image7.loadGif(name: "1SUU")*/
         
         self.applyRoundCorner(image1)
         self.applyRoundCorner(image2)

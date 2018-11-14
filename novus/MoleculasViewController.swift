@@ -35,7 +35,7 @@ class MoleculasViewController: UIViewController {
     
     @IBAction func goFirstVideo(_ sender: Any) {
         if(ViewStateCelulaVegetal.state == true && ViewStateCelulaAnimal.state == true && ViewStateCelulaBacteriana.state == true){
-            ViewStateGeneralCelulas.state == true
+            ViewStateGeneralCelulas.state = true
         performSegue(withIdentifier: "FirstVideo", sender: self)
         } else{
             // create the alert

@@ -45,6 +45,7 @@ class CelulaVegetalViewController: UIViewController {
     @IBOutlet weak var estructuraCelular: UITextField!
     @IBOutlet weak var produccionProteinas: UITextField!
     
+    @IBOutlet weak var imgCelula: UIImageView!
     
     var seconds = 0
     var timer = Timer()
@@ -65,55 +66,7 @@ class CelulaVegetalViewController: UIViewController {
         let dest:MoleculasViewController = (segue.destination as? MoleculasViewController)!
         dest.tiempoV = tiempo.text!
     }
-    
-    let zoomImageView = UIView()
-    let blackBackgroundView = UIView()
-    var statusImageView: UIImageView?
-    
-    func animateImageView(statusImageView: UIImageView){
-        self.statusImageView = statusImageView
-        
-        if let startingFrame = statusImageView.superview?.convert(statusImageView.frame, to: nil) {
-            
-            statusImageView.alpha = 0
-            
-            blackBackgroundView.frame = self.view.frame
-            blackBackgroundView.backgroundColor = UIColor.black
-            blackBackgroundView.alpha = 0
-            view.addSubview(zoomImageView)
-            
-            zoomImageView.backgroundColor = UIColor.red
-            zoomImageView.frame = startingFrame
-            zoomImageView.isUserInteractionEnabled = true
-            zoomImageView.contentMode = .scaleAspectFill
-            zoomImageView.clipsToBounds = true
-            
-            zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("zoomOut"))))
-            
-            UIView.animate(withDuration: 0.75) { () -> Void in
-                let height = (self.view.frame.width / startingFrame.width) * startingFrame.height
-                let y = self.view.frame.height / 2 - height / 2
-                self.zoomImageView.frame = CGRect(x:0, y:y, width: self.view.frame.width, height: height)
-                self.blackBackgroundView.alpha = 1
-            }
-        }
-    }
-    
-    func zoomOut(){
-        if let startingFrame = statusImageView!.superview?.convert(statusImageView!.frame, to: nil) {
-            
-            UIView.animate(withDuration: 0.75, animations: { () -> Void in
-                self.blackBackgroundView.frame = startingFrame
-            self.blackBackgroundView.alpha = 0
-                
-            }, completion: { (didcomplete) -> Void in
-                self.zoomImageView.removeFromSuperview()
-                self.blackBackgroundView.removeFromSuperview()
-                self.statusImageView?.alpha = 1
-            })
-        }
-        
-    }
+
 
     @IBAction func goBack(_ sender: Any) {
         if citoplasma.text == "2" && nucleo.text == "1" && proteina.text == "3" && citoesqueleto.text == "4" && cloroplasto.text == "7" && reticuloLiso.text == "9" && membranaPlasmatica.text == "5" && Ribosoma.text == "13" && reticuloRugoso.text == "6" && mitocondria.text == "8" && Golgi.text == "11" && Vacuola.text == "10" && paredCelular.text == "12" && informacionCodificada.text == "1" && espacioOrganelos.text == "2" && captarLuz.text == "7" && fabricaEnergia.text == "8" && macromolecula.text == "3" && estructuraCelula.text == "4" && sintesisLipidos.text == "9" && agua.text == "10" && bicapaLipidica.text == "5" && sintesisProteinas.text == "6" && empaquetar.text == "11" && estructuraCelular.text == "12" && produccionProteinas.text == "13" {
@@ -207,11 +160,34 @@ class CelulaVegetalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let pictureTap = UITapGestureRecognizer(target: self, action: #selector(CelulaVegetalViewController.imageTapped)); imgCelula.addGestureRecognizer(pictureTap)
+            imgCelula.isUserInteractionEnabled = true
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaVegetalViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaVegetalViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         runTimer()
+    }
+    
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     

@@ -8,9 +8,13 @@
 import AVFoundation
 import UIKit
 import AVKit
+import SafariServices
 
 struct ViewStateGeneralDogma {
-    static var state = false
+    static var transcripcionState = false
+    static var traduccionState = false
+    static var ReplicacionState = false
+    static var Generalstate = false
 }
 
 class FirstVideoViewController: UIViewController {
@@ -25,20 +29,32 @@ class FirstVideoViewController: UIViewController {
     }
     
     @IBAction func goReplicacion(_ sender: Any) {
-        performSegue(withIdentifier: "Replicacion", sender: self)
+        
+        ViewStateGeneralDogma.ReplicacionState = true
+        guard let url = URL(string: "https://www.youtube.com/watch?v=QXlbLoVU8Cc&t=13s") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     @IBAction func goTranscripcion(_ sender: Any) {
-        performSegue(withIdentifier: "Transcripcion", sender: self)
+        
+        ViewStateGeneralDogma.transcripcionState = true
+        guard let url = URL(string: "https://www.youtube.com/watch?v=q4_STYCxKHk") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     @IBAction func goTraduccion(_ sender: Any) {
-        performSegue(withIdentifier: "Traduccion", sender: self)
+        
+        ViewStateGeneralDogma.traduccionState = true
+        guard let url = URL(string: "https://www.youtube.com/watch?v=xiAXUw0T-Sw&t=1s") else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     @IBAction func goSopaLetras(_ sender: Any) {
-        if (ViewStateVideoTranscripcion.state == true && ViewStateVideoReplicacion.state == true && ViewStateVideoTraduccion.state == true){
-            ViewStateGeneralDogma.state = true
+        if (ViewStateGeneralDogma.transcripcionState == true && ViewStateGeneralDogma.traduccionState == true && ViewStateGeneralDogma.ReplicacionState == true){
+            ViewStateGeneralDogma.Generalstate = true
         performSegue(withIdentifier: "goSopaLetras", sender: self)
         } else{
             // create the alert

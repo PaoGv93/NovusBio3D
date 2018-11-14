@@ -39,6 +39,9 @@ class CelulaBacterianaViewController: UIViewController {
     
     @IBOutlet weak var tiempoCelulaBacteriana: UILabel!
     
+    @IBOutlet weak var imgCelula: UIImageView!
+    
+    
     var seconds = 0
     var timer = Timer()
     var isTimerRunning = false
@@ -134,11 +137,34 @@ class CelulaBacterianaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let pictureTap = UITapGestureRecognizer(target: self, action: #selector(CelulaBacterianaViewController.imageTapped)); imgCelula.addGestureRecognizer(pictureTap)
+        imgCelula.isUserInteractionEnabled = true
 
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         runTimer()
+    }
+    
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

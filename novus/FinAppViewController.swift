@@ -44,7 +44,7 @@ class FinAppViewController: UIViewController, MFMailComposeViewControllerDelegat
 
         let stateAvatar = ViewStateAvatar.state
         let stateCelulas = ViewStateGeneralCelulas.state
-        let stateDogma = ViewStateGeneralDogma.state
+        let stateDogma = ViewStateGeneralDogma.Generalstate
         let stateRompecabezas = ViewStateRompecabezas.state
         let stateStorytelling = ViewStateStorytelling.state
         let stateCasos = ViewStateGeneralCasos.state
