@@ -32,18 +32,18 @@ class SopaLetrasViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.lightGray
         
-        let startPuzzle = Int(self.view.frame.width) - 648
+        let startPuzzle = Int(self.view.frame.width) - 600
         
         allImgViews = [UIImageView]()
         allCenters = [NSValue]()
         
         var xCen: Int = startPuzzle
-        var yCen: Int = 200
+        var yCen: Int = 440
         
         for i in 0..<4 {
             for j in 0..<4 {
                 
-                let myImgView = UIImageView(frame: CGRect(x: 300, y: 300, width: 162, height: 162))
+                let myImgView = UIImageView(frame: CGRect(x: 300, y: 300, width: 150, height: 150))
                 
                 let curCen = CGPoint(x: CGFloat(xCen), y: CGFloat(yCen))
                 allCenters.append(NSValue(cgPoint: curCen))
@@ -53,10 +53,10 @@ class SopaLetrasViewController: UIViewController {
                 myImgView.isUserInteractionEnabled = true
                 allImgViews.append(myImgView)
                 view.addSubview(myImgView)
-                xCen += 162
+                xCen += 150
             }
             xCen = startPuzzle
-            yCen += 162
+            yCen += 150
         }
         
         allImgViews[0].removeFromSuperview()
@@ -101,10 +101,10 @@ class SopaLetrasViewController: UIViewController {
         if myTouch?.view != self.view {
             tapCen = (myTouch?.view?.center)!
             
-            left = CGPoint(x: tapCen.x-162, y: tapCen.y)
-            right = CGPoint(x: tapCen.x+162, y: tapCen.y)
-            top = CGPoint(x: tapCen.x, y: tapCen.y+162)
-            bottom = CGPoint(x: tapCen.x, y: tapCen.y-162)
+            left = CGPoint(x: tapCen.x-150, y: tapCen.y)
+            right = CGPoint(x: tapCen.x+150, y: tapCen.y)
+            top = CGPoint(x: tapCen.x, y: tapCen.y+150)
+            bottom = CGPoint(x: tapCen.x, y: tapCen.y-150)
             
             if NSValue(cgPoint: left).isEqual(NSValue(cgPoint: emptySpot)) {
                 leftIsEmpty = true

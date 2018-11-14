@@ -904,7 +904,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROMPECABEZAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD9-Px-zeg">
-                                <rect key="frame" x="295" y="149" width="244" height="36"/>
+                                <rect key="frame" x="128" y="149" width="244" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -918,7 +918,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Puzzle" translatesAutoresizingMaskIntoConstraints="NO" id="cC3-mf-Zog">
-                                <rect key="frame" x="271" y="806" width="292" height="278"/>
+                                <rect key="frame" x="446" y="83.5" width="292" height="278"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -927,10 +927,10 @@
                             <constraint firstItem="BW5-XR-ibX" firstAttribute="top" secondItem="2gc-jq-j2W" secondAttribute="top" id="8mD-G5-f0W"/>
                             <constraint firstItem="2gc-jq-j2W" firstAttribute="bottom" secondItem="2qq-a6-bl8" secondAttribute="bottom" constant="20" id="G3H-jI-U7z"/>
                             <constraint firstItem="cC3-mf-Zog" firstAttribute="height" secondItem="6cm-jq-fGS" secondAttribute="height" multiplier="0.25" id="Zro-Ea-ize"/>
-                            <constraint firstItem="cC3-mf-Zog" firstAttribute="centerY" secondItem="6cm-jq-fGS" secondAttribute="centerY" multiplier="1.7" id="br4-Vh-4h0"/>
+                            <constraint firstItem="cC3-mf-Zog" firstAttribute="centerY" secondItem="6cm-jq-fGS" secondAttribute="centerY" multiplier="0.4" id="br4-Vh-4h0"/>
                             <constraint firstItem="aD9-Px-zeg" firstAttribute="centerY" secondItem="6cm-jq-fGS" secondAttribute="centerY" multiplier="0.3" id="ko7-jO-J8D"/>
-                            <constraint firstItem="cC3-mf-Zog" firstAttribute="centerX" secondItem="6cm-jq-fGS" secondAttribute="centerX" id="lRB-F7-KMd"/>
-                            <constraint firstItem="aD9-Px-zeg" firstAttribute="centerX" secondItem="6cm-jq-fGS" secondAttribute="centerX" id="onw-dE-rsn"/>
+                            <constraint firstItem="cC3-mf-Zog" firstAttribute="centerX" secondItem="6cm-jq-fGS" secondAttribute="centerX" multiplier="1.42" id="lRB-F7-KMd"/>
+                            <constraint firstItem="aD9-Px-zeg" firstAttribute="centerX" secondItem="6cm-jq-fGS" secondAttribute="centerX" multiplier="0.6" id="onw-dE-rsn"/>
                             <constraint firstItem="cC3-mf-Zog" firstAttribute="width" secondItem="6cm-jq-fGS" secondAttribute="width" multiplier="0.35" id="wBs-t0-KvT"/>
                             <constraint firstItem="2gc-jq-j2W" firstAttribute="trailing" secondItem="BW5-XR-ibX" secondAttribute="trailing" constant="20" id="wen-PJ-cnR"/>
                         </constraints>
@@ -4665,37 +4665,37 @@ terminación</string>
                                     <outlet property="delegate" destination="fQy-Gb-AtM" id="HiN-1i-UKP"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Quién?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-sU-559">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Quién?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-sU-559">
                                 <rect key="frame" x="52" y="713" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Porqué?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYy-U3-kTH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Porqué?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYy-U3-kTH">
                                 <rect key="frame" x="155" y="713" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Con quién?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-gS-zgw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Con quién?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-gS-zgw">
                                 <rect key="frame" x="253" y="713" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Ic-onB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Cómo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Ic-onB">
                                 <rect key="frame" x="377" y="713" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuándo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mB-Ty-u66">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Cuándo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mB-Ty-u66">
                                 <rect key="frame" x="479" y="713" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Dónde?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-Lg-z2m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Dónde?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-Lg-z2m">
                                 <rect key="frame" x="591" y="713" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -4771,6 +4771,7 @@ terminación</string>
                             <constraint firstItem="3gU-tg-mhw" firstAttribute="leading" secondItem="N8f-Lg-z2m" secondAttribute="trailing" constant="12" id="QvW-c0-ZUU"/>
                             <constraint firstItem="h7f-Ej-eb2" firstAttribute="centerX" secondItem="9QK-26-Yxt" secondAttribute="centerX" multiplier="1.76" id="RLw-xc-jRQ"/>
                             <constraint firstItem="N8f-Lg-z2m" firstAttribute="top" secondItem="TsO-Tm-oJW" secondAttribute="bottom" constant="49" id="UMn-tO-I7o"/>
+                            <constraint firstItem="TdN-g1-fgP" firstAttribute="trailing" secondItem="3gU-tg-mhw" secondAttribute="trailing" constant="38" id="UfW-8f-8kd"/>
                             <constraint firstItem="ghE-Ic-onB" firstAttribute="top" secondItem="lei-J4-Cxa" secondAttribute="bottom" constant="49" id="Xem-rM-SWl"/>
                             <constraint firstItem="Caa-zc-zVt" firstAttribute="width" secondItem="9QK-26-Yxt" secondAttribute="width" multiplier="0.9" id="YRr-ZE-Akp"/>
                             <constraint firstItem="TsO-Tm-oJW" firstAttribute="centerY" secondItem="9QK-26-Yxt" secondAttribute="centerY" id="Yvr-8M-AWW"/>
