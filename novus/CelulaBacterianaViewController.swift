@@ -37,36 +37,14 @@ class CelulaBacterianaViewController: UIViewController {
     @IBOutlet weak var entradaSustancias: UITextField!
     @IBOutlet weak var produccionProteinas: UITextField!
     
-    @IBOutlet weak var tiempoCelulaBacteriana: UILabel!
     
     @IBOutlet weak var imgCelula: UIImageView!
     
-    
-    var seconds = 0
-    var timer = Timer()
-    var isTimerRunning = false
-    
-    var tiempo = UILabel()
-    
-    func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(CelulaBacterianaViewController.updateTimer)), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateTimer() {
-        seconds += 1
-        tiempoCelulaBacteriana.text = "Tiempo: \(seconds) seg"
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest:MoleculasViewController = (segue.destination as? MoleculasViewController)!
-        dest.tiempoB = tiempo.text!
-    }
     
     @IBAction func goBack(_ sender: Any) {
         
         if plasmidos.text == "1" && proteina.text == "3" && flagelo.text == "8" && ribosoma.text == "10" && membranaPlasmatica.text == "5" && pilus.text == "9" && glicocalix.text == "7" && paredCelular.text == "6" && fimbria.text == "4" && citoplasma.text == "2" && informacion.text == "1" && espacioOrganelos.text == "2"  && pegarSuperficie.text == "7" && movilidadCelular.text == "8" && macromolecula.text == "3" && microvellosidad.text == "4" && intercambioInformacion.text == "9" && bicapaLipidica.text == "5" && entradaSustancias.text == "6" && produccionProteinas.text == "10" {
             
-            tiempo.text = tiempoCelulaBacteriana.text
             ViewStateCelulaBacteriana.state = true
             performSegue(withIdentifier: "goBack", sender: self)
         }
@@ -144,7 +122,6 @@ class CelulaBacterianaViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaBacterianaViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        runTimer()
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {

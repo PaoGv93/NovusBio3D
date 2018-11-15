@@ -27,9 +27,7 @@ class CelulaVegetalViewController: UIViewController {
     @IBOutlet weak var Golgi: UITextField!
     @IBOutlet weak var Vacuola: UITextField!
     @IBOutlet weak var paredCelular: UITextField!
-    
-    @IBOutlet weak var tiempoCelulaVegetal: UILabel!
-    
+        
     //Definiciones
     @IBOutlet weak var informacionCodificada: UITextField!
     @IBOutlet weak var espacioOrganelos: UITextField!
@@ -46,32 +44,11 @@ class CelulaVegetalViewController: UIViewController {
     @IBOutlet weak var produccionProteinas: UITextField!
     
     @IBOutlet weak var imgCelula: UIImageView!
-    
-    var seconds = 0
-    var timer = Timer()
-    var isTimerRunning = false
-    
-    var tiempo = UILabel()
-    
-    func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(CelulaVegetalViewController.updateTimer)), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateTimer() {
-        seconds += 1
-        tiempoCelulaVegetal.text = "Tiempo: \(seconds) seg"
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest:MoleculasViewController = (segue.destination as? MoleculasViewController)!
-        dest.tiempoV = tiempo.text!
-    }
 
 
     @IBAction func goBack(_ sender: Any) {
         if citoplasma.text == "2" && nucleo.text == "1" && proteina.text == "3" && citoesqueleto.text == "4" && cloroplasto.text == "7" && reticuloLiso.text == "9" && membranaPlasmatica.text == "5" && Ribosoma.text == "13" && reticuloRugoso.text == "6" && mitocondria.text == "8" && Golgi.text == "11" && Vacuola.text == "10" && paredCelular.text == "12" && informacionCodificada.text == "1" && espacioOrganelos.text == "2" && captarLuz.text == "7" && fabricaEnergia.text == "8" && macromolecula.text == "3" && estructuraCelula.text == "4" && sintesisLipidos.text == "9" && agua.text == "10" && bicapaLipidica.text == "5" && sintesisProteinas.text == "6" && empaquetar.text == "11" && estructuraCelular.text == "12" && produccionProteinas.text == "13" {
             
-            tiempo.text = tiempoCelulaVegetal.text
             ViewStateCelulaVegetal.state = true
             performSegue(withIdentifier: "goBack", sender: self)
         }
@@ -167,7 +144,6 @@ class CelulaVegetalViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaVegetalViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(CelulaVegetalViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        runTimer()
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {

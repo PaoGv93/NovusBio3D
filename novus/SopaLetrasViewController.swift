@@ -40,23 +40,23 @@ class SopaLetrasViewController: UIViewController {
         var xCen: Int = startPuzzle
         var yCen: Int = 440
         
-        for i in 0..<4 {
-            for j in 0..<4 {
+        for i in 0..<3 {
+            for j in 0..<3 {
                 
-                let myImgView = UIImageView(frame: CGRect(x: 300, y: 300, width: 150, height: 150))
+                let myImgView = UIImageView(frame: CGRect(x: 300, y: 300, width: 200, height: 200))
                 
                 let curCen = CGPoint(x: CGFloat(xCen), y: CGFloat(yCen))
                 allCenters.append(NSValue(cgPoint: curCen))
                 
                 myImgView.center = curCen
-                myImgView.image = UIImage(named: String(format: "jc_%02i.jpeg", j + i * 4))
+                myImgView.image = UIImage(named: String(format: "jc_%02i.jpeg", j + i * 3))
                 myImgView.isUserInteractionEnabled = true
                 allImgViews.append(myImgView)
                 view.addSubview(myImgView)
-                xCen += 150
+                xCen += 200
             }
             xCen = startPuzzle
-            yCen += 150
+            yCen += 200
         }
         
         allImgViews[0].removeFromSuperview()
@@ -101,10 +101,10 @@ class SopaLetrasViewController: UIViewController {
         if myTouch?.view != self.view {
             tapCen = (myTouch?.view?.center)!
             
-            left = CGPoint(x: tapCen.x-150, y: tapCen.y)
-            right = CGPoint(x: tapCen.x+150, y: tapCen.y)
-            top = CGPoint(x: tapCen.x, y: tapCen.y+150)
-            bottom = CGPoint(x: tapCen.x, y: tapCen.y-150)
+            left = CGPoint(x: tapCen.x-200, y: tapCen.y)
+            right = CGPoint(x: tapCen.x+200, y: tapCen.y)
+            top = CGPoint(x: tapCen.x, y: tapCen.y+200)
+            bottom = CGPoint(x: tapCen.x, y: tapCen.y-200)
             
             if NSValue(cgPoint: left).isEqual(NSValue(cgPoint: emptySpot)) {
                 leftIsEmpty = true

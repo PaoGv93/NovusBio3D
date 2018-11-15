@@ -18,16 +18,6 @@ class MoleculasViewController: UIViewController {
     @IBOutlet weak var botonVegetal: UIButton!
     @IBOutlet weak var botonBacteria: UIButton!
     
-    // Tiempos de las moleculas
-    @IBOutlet weak var tiempoAnimal: UILabel!
-    var tiempoA = String()
-
-    @IBOutlet weak var tiempoVegetal: UILabel!
-    var tiempoV = String()
-
-    @IBOutlet weak var tiempoBacteria: UILabel!
-    var tiempoB = String()
-    
     //ir a puntos finales
     @IBAction func irPuntos(_ sender: Any) {
         performSegue(withIdentifier: "irPuntos", sender: self)
@@ -67,10 +57,6 @@ class MoleculasViewController: UIViewController {
         self.applyShadow(botonAnimal)
         self.applyShadow(botonVegetal)
         self.applyShadow(botonBacteria)
-
-        tiempoAnimal.text = tiempoA
-        tiempoVegetal.text = tiempoV
-        tiempoBacteria.text = tiempoB
 
     }
 

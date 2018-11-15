@@ -7,22 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02FD32CF219C89E90020497E /* jc_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32BF219C89E70020497E /* jc_02.jpeg */; };
-		02FD32D0219C89E90020497E /* jc_03.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C0219C89E70020497E /* jc_03.jpeg */; };
-		02FD32D1219C89E90020497E /* jc_06.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C1219C89E70020497E /* jc_06.jpeg */; };
-		02FD32D2219C89E90020497E /* jc_12.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C2219C89E70020497E /* jc_12.jpeg */; };
-		02FD32D3219C89E90020497E /* jc_15.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C3219C89E70020497E /* jc_15.jpeg */; };
-		02FD32D4219C89E90020497E /* jc_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C4219C89E80020497E /* jc_01.jpeg */; };
-		02FD32D5219C89E90020497E /* jc_11.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C5219C89E80020497E /* jc_11.jpeg */; };
-		02FD32D6219C89E90020497E /* jc_00.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C6219C89E80020497E /* jc_00.jpeg */; };
-		02FD32D7219C89E90020497E /* jc_09.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C7219C89E80020497E /* jc_09.jpeg */; };
-		02FD32D8219C89E90020497E /* jc_08.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C8219C89E80020497E /* jc_08.jpeg */; };
-		02FD32D9219C89E90020497E /* jc_14.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32C9219C89E80020497E /* jc_14.jpeg */; };
-		02FD32DA219C89E90020497E /* jc_05.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32CA219C89E80020497E /* jc_05.jpeg */; };
-		02FD32DB219C89E90020497E /* jc_10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32CB219C89E80020497E /* jc_10.jpeg */; };
-		02FD32DC219C89E90020497E /* jc_13.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32CC219C89E90020497E /* jc_13.jpeg */; };
-		02FD32DD219C89E90020497E /* jc_07.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32CD219C89E90020497E /* jc_07.jpeg */; };
-		02FD32DE219C89E90020497E /* jc_04.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 02FD32CE219C89E90020497E /* jc_04.jpeg */; };
+		028B0B90219D3F2900EA33EF /* jc_00.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B87219D3F2500EA33EF /* jc_00.jpeg */; };
+		028B0B91219D3F2900EA33EF /* jc_04.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B88219D3F2600EA33EF /* jc_04.jpeg */; };
+		028B0B92219D3F2900EA33EF /* jc_08.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B89219D3F2600EA33EF /* jc_08.jpeg */; };
+		028B0B93219D3F2900EA33EF /* jc_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8A219D3F2700EA33EF /* jc_02.jpeg */; };
+		028B0B94219D3F2900EA33EF /* jc_06.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8B219D3F2700EA33EF /* jc_06.jpeg */; };
+		028B0B95219D3F2900EA33EF /* jc_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8C219D3F2700EA33EF /* jc_01.jpeg */; };
+		028B0B96219D3F2900EA33EF /* jc_05.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8D219D3F2800EA33EF /* jc_05.jpeg */; };
+		028B0B97219D3F2900EA33EF /* jc_07.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8E219D3F2800EA33EF /* jc_07.jpeg */; };
+		028B0B98219D3F2900EA33EF /* jc_03.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028B0B8F219D3F2900EA33EF /* jc_03.jpeg */; };
 		DA04BCFE20D82EA8003DB2A6 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04BCFD20D82EA8003DB2A6 /* InicioViewController.swift */; };
 		DA04BD0020D83208003DB2A6 /* AtaqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04BCFF20D83208003DB2A6 /* AtaqueViewController.swift */; };
 		DA30992C21226B7200AF9FFB /* 1EVV.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA30992521226B6100AF9FFB /* 1EVV.gif */; };
@@ -78,22 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02FD32BF219C89E70020497E /* jc_02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_02.jpeg; path = "novus/New Group/jc_02.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C0219C89E70020497E /* jc_03.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_03.jpeg; path = "novus/New Group/jc_03.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C1219C89E70020497E /* jc_06.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_06.jpeg; path = "novus/New Group/jc_06.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C2219C89E70020497E /* jc_12.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_12.jpeg; path = "novus/New Group/jc_12.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C3219C89E70020497E /* jc_15.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_15.jpeg; path = "novus/New Group/jc_15.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C4219C89E80020497E /* jc_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_01.jpeg; path = "novus/New Group/jc_01.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C5219C89E80020497E /* jc_11.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_11.jpeg; path = "novus/New Group/jc_11.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C6219C89E80020497E /* jc_00.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_00.jpeg; path = "novus/New Group/jc_00.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C7219C89E80020497E /* jc_09.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_09.jpeg; path = "novus/New Group/jc_09.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C8219C89E80020497E /* jc_08.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_08.jpeg; path = "novus/New Group/jc_08.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32C9219C89E80020497E /* jc_14.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_14.jpeg; path = "novus/New Group/jc_14.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32CA219C89E80020497E /* jc_05.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_05.jpeg; path = "novus/New Group/jc_05.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32CB219C89E80020497E /* jc_10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_10.jpeg; path = "novus/New Group/jc_10.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32CC219C89E90020497E /* jc_13.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_13.jpeg; path = "novus/New Group/jc_13.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32CD219C89E90020497E /* jc_07.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_07.jpeg; path = "novus/New Group/jc_07.jpeg"; sourceTree = SOURCE_ROOT; };
-		02FD32CE219C89E90020497E /* jc_04.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_04.jpeg; path = "novus/New Group/jc_04.jpeg"; sourceTree = SOURCE_ROOT; };
+		028B0B87219D3F2500EA33EF /* jc_00.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_00.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_00.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B88219D3F2600EA33EF /* jc_04.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_04.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_04.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B89219D3F2600EA33EF /* jc_08.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_08.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_08.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8A219D3F2700EA33EF /* jc_02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_02.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_02.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8B219D3F2700EA33EF /* jc_06.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_06.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_06.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8C219D3F2700EA33EF /* jc_01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_01.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_01.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8D219D3F2800EA33EF /* jc_05.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_05.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_05.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8E219D3F2800EA33EF /* jc_07.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_07.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_07.jpeg; sourceTree = SOURCE_ROOT; };
+		028B0B8F219D3F2900EA33EF /* jc_03.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jc_03.jpeg; path = imagenes/Imagenes_CortadasRompecabezas/jc_03.jpeg; sourceTree = SOURCE_ROOT; };
 		DA04BCFD20D82EA8003DB2A6 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		DA04BCFF20D83208003DB2A6 /* AtaqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtaqueViewController.swift; sourceTree = "<group>"; };
 		DA30992521226B6100AF9FFB /* 1EVV.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 1EVV.gif; path = imagenes/1EVV.gif; sourceTree = SOURCE_ROOT; };
@@ -165,22 +151,15 @@
 		02FD32DF219C89EF0020497E /* imagesGrp */ = {
 			isa = PBXGroup;
 			children = (
-				02FD32C6219C89E80020497E /* jc_00.jpeg */,
-				02FD32C4219C89E80020497E /* jc_01.jpeg */,
-				02FD32BF219C89E70020497E /* jc_02.jpeg */,
-				02FD32C0219C89E70020497E /* jc_03.jpeg */,
-				02FD32CE219C89E90020497E /* jc_04.jpeg */,
-				02FD32CA219C89E80020497E /* jc_05.jpeg */,
-				02FD32C1219C89E70020497E /* jc_06.jpeg */,
-				02FD32CD219C89E90020497E /* jc_07.jpeg */,
-				02FD32C8219C89E80020497E /* jc_08.jpeg */,
-				02FD32C7219C89E80020497E /* jc_09.jpeg */,
-				02FD32CB219C89E80020497E /* jc_10.jpeg */,
-				02FD32C5219C89E80020497E /* jc_11.jpeg */,
-				02FD32C2219C89E70020497E /* jc_12.jpeg */,
-				02FD32CC219C89E90020497E /* jc_13.jpeg */,
-				02FD32C9219C89E80020497E /* jc_14.jpeg */,
-				02FD32C3219C89E70020497E /* jc_15.jpeg */,
+				028B0B87219D3F2500EA33EF /* jc_00.jpeg */,
+				028B0B8C219D3F2700EA33EF /* jc_01.jpeg */,
+				028B0B8A219D3F2700EA33EF /* jc_02.jpeg */,
+				028B0B8F219D3F2900EA33EF /* jc_03.jpeg */,
+				028B0B88219D3F2600EA33EF /* jc_04.jpeg */,
+				028B0B8D219D3F2800EA33EF /* jc_05.jpeg */,
+				028B0B8B219D3F2700EA33EF /* jc_06.jpeg */,
+				028B0B8E219D3F2800EA33EF /* jc_07.jpeg */,
+				028B0B89219D3F2600EA33EF /* jc_08.jpeg */,
 			);
 			name = imagesGrp;
 			path = "New Group";
@@ -370,35 +349,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02FD32CF219C89E90020497E /* jc_02.jpeg in Resources */,
-				02FD32DB219C89E90020497E /* jc_10.jpeg in Resources */,
-				02FD32DA219C89E90020497E /* jc_05.jpeg in Resources */,
 				DA36BB2F2127F75300987795 /* videoRadiacion.mp4 in Resources */,
 				DA36BB302127F75300987795 /* videoBacteria.mp4 in Resources */,
 				DA36BB312127F75300987795 /* videoVirus.mp4 in Resources */,
 				DA36BB322127F75300987795 /* videoMolecula.mp4 in Resources */,
 				DA30993021226B7200AF9FFB /* 2O8K.gif in Resources */,
-				02FD32D6219C89E90020497E /* jc_00.jpeg in Resources */,
+				028B0B94219D3F2900EA33EF /* jc_06.jpeg in Resources */,
 				DA30992F21226B7200AF9FFB /* 1SUU.gif in Resources */,
+				028B0B93219D3F2900EA33EF /* jc_02.jpeg in Resources */,
 				DAB7362520C98DB700B8650F /* LaunchScreen.storyboard in Resources */,
-				02FD32D3219C89E90020497E /* jc_15.jpeg in Resources */,
-				02FD32D9219C89E90020497E /* jc_14.jpeg in Resources */,
-				02FD32D7219C89E90020497E /* jc_09.jpeg in Resources */,
+				028B0B97219D3F2900EA33EF /* jc_07.jpeg in Resources */,
 				DA30993221226B7200AF9FFB /* 4V49.gif in Resources */,
 				DAB7362220C98DB700B8650F /* Assets.xcassets in Resources */,
 				DA30992C21226B7200AF9FFB /* 1EVV.gif in Resources */,
+				028B0B92219D3F2900EA33EF /* jc_08.jpeg in Resources */,
+				028B0B90219D3F2900EA33EF /* jc_00.jpeg in Resources */,
 				DA30993121226B7200AF9FFB /* 4Q5S.gif in Resources */,
-				02FD32DC219C89E90020497E /* jc_13.jpeg in Resources */,
+				028B0B95219D3F2900EA33EF /* jc_01.jpeg in Resources */,
+				028B0B98219D3F2900EA33EF /* jc_03.jpeg in Resources */,
 				DA30992D21226B7200AF9FFB /* 1PVO.gif in Resources */,
-				02FD32DE219C89E90020497E /* jc_04.jpeg in Resources */,
-				02FD32D5219C89E90020497E /* jc_11.jpeg in Resources */,
-				02FD32D1219C89E90020497E /* jc_06.jpeg in Resources */,
-				02FD32D8219C89E90020497E /* jc_08.jpeg in Resources */,
-				02FD32D4219C89E90020497E /* jc_01.jpeg in Resources */,
-				02FD32D0219C89E90020497E /* jc_03.jpeg in Resources */,
-				02FD32D2219C89E90020497E /* jc_12.jpeg in Resources */,
 				DAB7362020C98DA900B8650F /* Main.storyboard in Resources */,
-				02FD32DD219C89E90020497E /* jc_07.jpeg in Resources */,
+				028B0B96219D3F2900EA33EF /* jc_05.jpeg in Resources */,
+				028B0B91219D3F2900EA33EF /* jc_04.jpeg in Resources */,
 				DA30992E21226B7200AF9FFB /* 1TAU.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,14 +589,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U33MR58F32;
+				DEVELOPMENT_TEAM = 3FK5644NJ8;
 				INFOPLIST_FILE = novus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = n.novus;
+				PRODUCT_BUNDLE_IDENTIFIER = t.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -638,14 +610,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U33MR58F32;
+				DEVELOPMENT_TEAM = 3FK5644NJ8;
 				INFOPLIST_FILE = novus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = n.novus;
+				PRODUCT_BUNDLE_IDENTIFIER = t.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
